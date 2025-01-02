@@ -1,18 +1,39 @@
-import React from 'react'
-import profil from "../assets/profil.png"
+import React from "react";
+// import profil from "../assets/profil.png";
 
-const Circle = () => {
+const Circle = (props) => {
+  const { id } = props;
+  console.log(`bu id bilgisi: ${id}`);
+
+  const getRotation = (id) => {
+    switch (id) {
+      case "link-about":
+        return `rotate(140deg)`;
+      case "link-project":
+        return `rotate(170deg)`;
+      case "link-resume":
+        return `rotate(-140deg)`;
+      case "link-contact":
+        return `rotate(-170deg)`;
+      default:
+        return `rotate(0deg)`;
+    }
+  };
+
   return (
-    <div className="bg-light-grey">
+    <div className="relative w-60 h-60 rounded-full border-4 border-light-grey shadow-custom-out overflow-hidden">
       {/* Outer Circle */}
-        <div className="relative block h-[15em] w-[15em] rounded-full overflow-hidden border-light-grey shadow-custom-outer
-                      before:absolute before:block before:rounded-full before:top-15 before:left-15 before:bottom-15 before:right-15
-                      before:bg-light-grey before:shadow-custom-outer:before">
-            {/* Inner Circle with Custom Background */}
-            <div className="absolute w-full h-full inset-4 -z-10 rounded-full "></div>
+      <div className="absolute inset-0 rounded-full bg-light-grey z-[-1]">
+        {/* Inner Circle with Custom Background */}
+        <div className="absolute inset-4 bg-light-grey rounded-full shadow-custom-before">
+          <div
+            class="absolute w-[46%] h-1 bg-mid-blue rounded top-[50%] left-[5%] origin-right transition-transform duration-50"
+            style={{ transform: getRotation(id) }}
+          ></div>
         </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Circle
+export default Circle;

@@ -2,21 +2,28 @@ export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        display: ["Lato", "ui-serif"],
+      },
       backgroundImage: {
         "inner-circle": "url('/src/assets/profil.png')",
       },
       boxShadow: {
-        "custom-outer":
-          "-10px -10px 15px rgba(255, 255, 255, 1), 10px 10px 10px rgba(0, 0, 0, 0.2), inset -10px -10px 15px rgba(255, 255, 255, 0.5), inset 10px 10px 10px rgba(0, 0, 0, 0.2)",
-        "custom-outer:before":
-          "-10px -10px 35px rgba(255, 255, 255, 1),5px 10px 10px rgba(0, 0, 0, 0.2),inset -10px -10px 15px rgba(255, 255, 255, 0.5),inset 10px 10px 30px rgba(0, 0, 0, 0.2);",
+        "custom-out":
+          "-10px -10px 15px rgba(224, 225, 221, 1), 10px 10px 10px rgba(27, 38, 59, 0.2), inset -10px -10px 15px rgba(224, 225, 221, 0.5), inset 10px 10px 10px rgba(27, 38, 59, 0.2)",
+        "custom-before":
+          "-10px -10px 35px rgba(224, 225, 221, 1), 5px 10px 10px rgba(27, 38, 59, 0.2), inset -10px -10px 15px rgba(224, 225, 221, 0.5), inset 10px 10px 30px rgba(27, 38, 59, 0.2)",
       },
-    },
-    colors: {
-      "light-grey": "#edf6f9",
-      "light-blue": "#778da9",
-      "mid-blue": "#0415a77",
-      "darkened-blue": "#1b263b",
+      colors: {
+        "light-grey": "#e0e1dd",
+        "light-blue": "#778da9",
+        "mid-blue": "#415a77",
+        "dark-blue": "#1b263b",
+      },
+      rotate: {
+        140: "140deg",
+        170: "170deg",
+      },
     },
   },
   plugins: [],
