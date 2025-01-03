@@ -1,43 +1,105 @@
-import React from 'react'
+import React from "react";
 
 const About = () => {
   return (
-    <div>
-      Aboutme : 
-      <p>Hi! My name is Fulya and I am a full-stack web developer with a passion for front-end development and design. I am currently working at Nordic Waves Group to develop a carbon footprint calculator that we support worldwide.
-I am looking for a career that will allow me to channel my creativity by designing beautiful software and engaging experiences.
+    <section
+      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 text-mid-blue"
+      id="about"
+      aria-label="About me"
+    >
+      <div
+        className="sticky top-0 z-20 -mx-6 mb-4 bg-light-grey w-screen px-6 py-5 backdrop-blur
+      md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0 "
+      >
+        <h2 className="text-sm font-bold uppercase tracking-widest text-dark-blue lg:sr-only">
+          About
+        </h2>
+      </div>
+      <div>
+        <h2 className="mb-4">
+          What happens when you combine security expertise with a love for
+          creative coding?
+        </h2>
+        <p className="mb-4">
+          After eight years in CCTV and access control security as a pre-sales
+          engineer, I realized I craved something more dynamic&nbsp;
+          <em className="font-bold">
+            —something that let me build, design, and constantly learn.
+          </em>
+          &nbsp; So, I made the leap into web development!
+        </p>
+        <p className="mb-4">
+          Over the past 1.5 years, I've completed bootcamps and courses,
+          mastering the&nbsp;
+          <em className="font-bold capitalize tracking-tight">
+            HMTL&nbsp;&#124;&nbsp;CSS&nbsp;&#124;&nbsp;React&nbsp;&#124;&nbsp;JavaScript&nbsp;&#124;&nbsp;TypeScript
+            &nbsp;&#124;&nbsp;Node&nbsp;&#124;&nbsp;Express&nbsp;&#124;&nbsp;MongoDB.&nbsp;
+          </em>
+          While I enjoy full-stack development, my heart has always been with
+          front-end—crafting sleek, intuitive designs with React and CSS.
+        </p>
+        <p className="mb-4">
+          Currently, I'm putting my skills to work as a&nbsp;
+          <em className="font-bold">Full-Stack Developer</em> at
+          <a
+            className="font-bold text-light-blue hover:text-dark-blue focus-visible:text-teal-300"
+            href="https://www.nordicwaves.org/"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="small company(opens in new tab)"
+          >
+            &nbsp;Nordic Waves Group
+          </a>
+          , where I'm helping build a&nbsp;
+          <a
+            className="font-bold text-light-blue hover:text-dark-blue focus-visible:text-teal-300"
+            href="hhttps://greenhousecalculator.com/"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="greenhouse calculator project(opens in new tab)"
+          >
+            &nbsp;carbon calculator tool
+          </a>
+          &nbsp; that makes environmental impact assessment more accessible. My
+          role involves crafting seamless experiences between backend APIs and
+          React frontend components&nbsp;
+          <em className="font-bold">
+            – a perfect blend of technical complexity and user-focused design.
+          </em>
+        </p>
+        <p className="">
+          My background in security systems might seem unusual for a web
+          developer, but it's actually my secret weapon. Those years of
+          technical training and pre-sales engineering taught me how to:
+        </p>
+        <ul className="list-disc pl-4 ml-8 my-4">
+          <li>
+            Translate complex technical concepts into user-friendly solutions
+          </li>
+          <li>
+            Adapt quickly to new technologies -- try keeping up with security
+            tech!
+          </li>
+          <li>Collaborate effectively with diverse teams and stakeholders</li>
+        </ul>
+        <p className="mb-4 font-bold">What People Say About Me:</p>
+        <p className="mb-4 text-light-blue">From my previous managers:</p>
+        <div className="space-y-4">
+          <blockquote className="border-l-4 border-light-blue pl-4 italic rounded-lg">
+            “Fulya is a quick learner with an unstoppable ‘can-do’ attitude.”
+          </blockquote>
+          <blockquote className="border-l-4 border-light-blue pl-4 italic rounded-lg">
+            “She’s not just an engineer; she’s a problem solver with high energy
+            and a great sense of humor.”
+          </blockquote>
+          <blockquote className="border-l-4 border-light-blue pl-4 italic rounded-lg">
+            “If you want someone who gets things done and keeps the team spirit
+            high, she’s the one.”
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-</p>
-<p>When I'm not on the computer, I enjoy digital design, painting, and playing PlayStation.</p>
-<p>Hi! My name is Fulya and I am a full-stack web developer with a passion for front-end development and design. I am currently working at Nordic Waves Group to develop a carbon footprint calculator that we support worldwide.
-I am looking for a career that will allow me to channel my creativity by designing beautiful software and engaging experiences.
-
-</p>
-<p>When I'm not on the computer, I enjoy digital design, painting, and playing PlayStation.</p>
-<p>Hi! My name is Fulya and I am a full-stack web developer with a passion for front-end development and design. I am currently working at Nordic Waves Group to develop a carbon footprint calculator that we support worldwide.
-I am looking for a career that will allow me to channel my creativity by designing beautiful software and engaging experiences.
-
-</p>
-<p>When I'm not on the computer, I enjoy digital design, painting, and playing PlayStation.</p>
-<p>Hi! My name is Fulya and I am a full-stack web developer with a passion for front-end development and design. I am currently working at Nordic Waves Group to develop a carbon footprint calculator that we support worldwide.
-I am looking for a career that will allow me to channel my creativity by designing beautiful software and engaging experiences.
-
-</p>
-<p>When I'm not on the computer, I enjoy digital design, painting, and playing PlayStation.</p>
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis auctor ipsum, et ullamcorper quam. Integer nec ex malesuada, blandit urna et, feugiat felis. Sed nec sodales justo, et tincidunt velit. Phasellus et magna ligula. Morbi tincidunt auctor mauris, nec interdum orci mollis eu. Quisque metus enim, auctor at vehicula et, convallis ac urna. Donec elit nibh, sodales vel mattis sit amet, porttitor feugiat ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-
-Quisque ante magna, fermentum sit amet sapien vel, tincidunt aliquet libero. Quisque sem nunc, rutrum ac blandit at, interdum non sem. Quisque at sodales augue, eu porttitor libero. Aliquam erat volutpat. Maecenas eget dictum nisl. Praesent sodales risus at nunc feugiat dapibus. Vestibulum rutrum vulputate facilisis. Praesent porta, urna ac varius lacinia, augue justo suscipit justo, sit amet volutpat magna urna quis neque. Sed fringilla porttitor tortor ac cursus. Integer sed justo urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt sodales nibh eu pulvinar. Nam convallis interdum turpis at fringilla. Nullam sollicitudin ante sit amet lectus aliquet, eget vulputate augue auctor. Ut interdum pulvinar enim ac ultricies.
-
-Vestibulum egestas risus vel risus sagittis ultrices. Etiam faucibus nulla tortor, vitae commodo orci feugiat at. Integer augue erat, mollis at quam sit amet, mattis consequat odio. Nulla facilisi. Donec non sapien lacus. Vivamus ac velit sit amet turpis pellentesque tristique eget a magna. Nunc ut ligula interdum, rhoncus lectus nec, pellentesque dolor. Fusce luctus, augue quis sodales lacinia, lectus velit tincidunt metus, id aliquam tellus ipsum vitae mauris. Ut semper efficitur tortor id consequat. Aliquam condimentum dolor facilisis, tristique felis id, venenatis ligula. Suspendisse eget felis a tellus aliquet placerat. Cras condimentum consectetur bibendum. Nam sed ex nec eros varius pharetra.
-
-Nulla rutrum laoreet urna, at interdum quam accumsan sed. Suspendisse a porttitor enim. Aenean auctor lorem id vulputate aliquam. Quisque vulputate mi lorem, in malesuada ex laoreet nec. Aenean ullamcorper, magna in volutpat pretium, eros arcu volutpat eros, at egestas orci leo a diam. Aenean congue dolor ut commodo luctus. Donec non odio ac ligula dictum auctor.
-
-Vestibulum hendrerit erat vitae erat sodales feugiat. Mauris vitae risus finibus, mollis est sit amet, tincidunt erat. Vivamus ultrices in nibh eu volutpat. Ut viverra posuere orci aliquam tempor. Cras auctor gravida felis, vitae ullamcorper nisi sagittis vel. Nunc tempus tempor porttitor. Nunc in tincidunt nisi, in auctor enim.
-</p>
-
-    </div>
-  )
-}
-
-export default About
+export default About;
