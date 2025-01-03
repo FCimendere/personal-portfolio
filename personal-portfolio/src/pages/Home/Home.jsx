@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div className="">
       <div className="text-dark-blue font-display">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl :text-center">
           <a href="/">Fulya Çimendere</a>
         </h1>
         <h2 className="text-mid-blue mt-3 text-lg font-medium tracking-tight sm:text-lg">
@@ -41,8 +41,9 @@ const Home = () => {
               smooth={true}
               duration={500}
               onClick={() => handleClick(`link-${section}`)}
-              className="relative block no-underline uppercase overflow-hidden w-40 text-center text-mid-blue rounded-3xl border-2 border-light-grey shadow-custom-out 
-              hover:none hover:bg-mid-blue hover:text-light-grey hover:border-dark-blue cursor-pointer"
+              className={`relative block no-underline uppercase overflow-hidden w-40 text-center text-mid-blue rounded-3xl border-1 border-light-grey shadow-custom-out 
+              hover:none hover:bg-mid-blue hover:text-light-grey hover:border-dark-blue cursor-pointer
+              ${["project", "resume"].includes(section) ? " ml-5" : ""}`}
             >
               <span className="relative tracking-wider z-10 py-3">
                 {section.charAt(0).toUpperCase() + section.slice(1)}

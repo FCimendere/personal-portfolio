@@ -11,9 +11,9 @@ const Circle = ({ id }) => {
         case "link-project":
           return `rotate(170deg)`;
         case "link-resume":
-          return `rotate(-170deg)`;
+          return `rotate(200deg)`;
         case "link-contact":
-          return `rotate(-140deg)`;
+          return `rotate(220deg)`;
         default:
           return `rotate(0deg)`;
       }
