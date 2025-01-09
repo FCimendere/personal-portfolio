@@ -40,11 +40,11 @@ const projects = [
 
 const Project = () => {
   //Cloudinary implementation
-  const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
+  const cloud = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
 
   const cld = new Cloudinary({
     cloud: {
-      cloudName: cloudName,
+      cloudName: cloud,
     },
   });
 
