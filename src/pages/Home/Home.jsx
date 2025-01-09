@@ -41,7 +41,7 @@ const Home = () => {
               smooth={true}
               duration={500}
               onClick={() => handleClick(`link-${section}`)}
-              className={`relative block no-underline uppercase overflow-hidden w-40 text-center text-mid-blue rounded-3xl border-1 border-light-grey shadow-custom-out 
+              className={`relative block no-underline uppercase overflow-hidden w-40 text-center text-mid-blue rounded-3xl border border-light-grey shadow-custom-out 
               hover:none hover:shadow-custom-inset hover:text-mid-blue hover:border-dark-blue cursor-pointer
               ${["project", "resume"].includes(section) ? " ml-5" : ""}`}
             >

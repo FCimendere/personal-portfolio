@@ -2,6 +2,8 @@ import React from "react";
 import { Cloudinary } from "@cloudinary/url-gen";
 import { fill } from "@cloudinary/url-gen/actions/resize";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+import Badge from "../../components/Badge";
 
 const projects = [
   {
@@ -18,7 +20,7 @@ const projects = [
     description:
       "A social media app for sharing images which uses React, Tailwind CSS & Sanity as CMS - from start to finish.",
     link: "https://sharemebyfly.netlify.app/",
-    tech: ["React", "Masonry Layout", "Sanity CMS", "Netlify"],
+    tech: ["React", "Tailwind", "Sanity CMS", "Netlify"],
   },
   {
     id: 3,
@@ -26,15 +28,7 @@ const projects = [
     description:
       "A full-stack web application for sharing and reviewing campgrounds.",
     link: "https://yelp-camp-rgop.onrender.com/",
-    tech: [
-      "Bootstrap",
-      "Node",
-      "Express",
-      "EJS",
-      "MongoDB",
-      "JOI",
-      "Cloudinary",
-    ],
+    tech: ["Bootstrap", "Node", "Express", "EJS", "Mongo", "JOI", "Cloudinary"],
   },
 ];
 
@@ -64,12 +58,15 @@ const Project = () => {
       </div>
 
       <div className="container mx-auto px-4 py-10 max-w-3xl">
-        <div className="space-y-6">
+        <div className="space-y-6 text-light-blue">
           {projects.map((project) => (
-            <div
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
               key={project.id}
-              className="bg-light-grey overflow-hidden flex flex-col md:flex-row rounded-3xl border-1 border-light-grey shadow-custom-out
-              hover:none hover:shadow-custom-inset hover:text-mid-blue hover:border-dark-blue cursor-pointer"
+              className="bg-light-grey overflow-hidden flex flex-col md:flex-row rounded-3xl border border-light-grey 
+              hover:none hover:shadow-custom-inset hover:text-dark-blue hover:border-light-grey cursor-pointer"
             >
               {/* Thumbnail on left*/}
 
@@ -79,7 +76,7 @@ const Project = () => {
                   .resize(fill().width(500).height(500))
                   .toURL()}
                 alt="models"
-                className="mg:w-full lg:w-1/4 md:w-1/8 sm:w-1/16 mx-4 my-4 object-cover rounded-3xl border-1 border-light-grey shadow-custom-out"
+                className="hidden sm:block sm:w-1/6 md:w-1/6 lg:w-1/4 text-light-blue mx-4 my-4 object-cover rounded-3xl border border-light-grey shadow-custom-out"
               />
 
               {/* Content on the right */}
@@ -88,14 +85,25 @@ const Project = () => {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative tracking-wider z-10 py-3 hover:text-light-blue hover:underline"
+                  className="relative tracking-wider z-10 py-3 hover:text-dark-blue  hover:underline"
                 >
-                  {project.name} <OpenInNewIcon />
+                  {project.name}
                 </a>
-                <p className="text-mid-blue mt-2">{project.description}</p>
+                <p className="text-light-blue mt-2">{project.description}</p>
+                <div className="flex flex-row flex-wrap text-xs gap-2 mt-2">
+                  {project.tech.map((element) => (
+                    <Badge text={element} />
+                  ))}
+                </div>
               </div>
-            </div>
+            </a>
           ))}
+        </div>
+        <div>
+          View Full Project Archive{" "}
+          <span>
+            <KeyboardDoubleArrowRightIcon />
+          </span>
         </div>
       </div>
     </section>
