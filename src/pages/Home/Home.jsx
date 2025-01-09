@@ -21,7 +21,7 @@ const Home = () => {
           Full Stack Developer
         </h2>
         <p className="text-light-blue mt-4 max-w-xs leading-normal">
-          I build accessible, pixel-perfect digital experiences for the web.
+          I build accessible, pixel-perfect digital experie nces for the web.
         </p>
       </div>
       <div className="flex">
