@@ -4,9 +4,9 @@ import "./App.css";
 // import  Contacts  from "./pages/Contacts/Contact";
 import Home from "./pages/Home/Home";
 import RightSection from "./pages/RightSection/RightSection";
+import SplashCursor from "./components/SplashCursor";
 // import  NoPage  from "./pages/NoPage/NoPage";
 // import  Projects  from "./pages/Projects/Project";
-// import  Resume from "./pages/Resume/Resume";
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
         </div>
         <div className="right-section pt-24 lg:w-[52%] lg:py-24">
           {/* flex-1 */}
+          {/* <SplashCursor /> */}
           <RightSection />
         </div>
       </div>

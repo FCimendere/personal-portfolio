@@ -1,8 +1,8 @@
 import React from "react";
 import { Cloudinary } from "@cloudinary/url-gen";
 import { fill } from "@cloudinary/url-gen/actions/resize";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+// import { Link } from "react-router-dom";
+// import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 import Badge from "../../components/Badge";
 
 const projects = [
@@ -98,12 +98,6 @@ const Project = () => {
               </div>
             </a>
           ))}
-        </div>
-        <div>
-          View Full Project Archive{" "}
-          <span>
-            <KeyboardDoubleArrowRightIcon />
-          </span>
         </div>
       </div>
     </section>

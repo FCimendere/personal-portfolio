@@ -33,7 +33,7 @@ const Home = () => {
         {/* Button Group */}
 
         <div className="button-group flex flex-col justify-center gap-8">
-          {["about", "project", "resume", "contact"].map((section) => (
+          {["about", "project", "experience", "contact"].map((section) => (
             <Link
               key={section}
               id={`link-${section}`}
@@ -43,7 +43,7 @@ const Home = () => {
               onClick={() => handleClick(`link-${section}`)}
               className={`relative block no-underline uppercase overflow-hidden w-40 text-center text-mid-blue rounded-3xl border border-light-grey shadow-custom-out 
               hover:none hover:shadow-custom-inset hover:text-mid-blue hover:border-dark-blue cursor-pointer
-              ${["project", "resume"].includes(section) ? " ml-5" : ""}`}
+              ${["project", "experience"].includes(section) ? " ml-5" : ""}`}
             >
               <span className="relative tracking-wider z-10 py-3">
                 {section.charAt(0).toUpperCase() + section.slice(1)}
