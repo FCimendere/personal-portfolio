@@ -21,7 +21,8 @@ const Home = () => {
           Full Stack Developer
         </h2>
         <p className="text-light-blue mt-4 max-w-xs leading-normal">
-          I build accessible, pixel-perfect digital experie nces for the web.
+          Developer who loves creative design and the fusion of user experience
+          with robust engineering.
         </p>
       </div>
       <div className="flex">
@@ -32,7 +33,7 @@ const Home = () => {
 
         {/* Button Group */}
 
-        <div className="button-group flex flex-col justify-center gap-8">
+        <div className="button-group flex flex-col justify-center gap-8 ">
           {["about", "project", "experience", "contact"].map((section) => (
             <Link
               key={section}

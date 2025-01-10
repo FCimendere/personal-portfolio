@@ -55,7 +55,7 @@ const Experience = () => {
             >
               {/* Thumbnail on left*/}
 
-              <p className="text-light-blue mx-4 my-4 ">
+              <p className="text-light-blue p-4 pt-6 uppercase ">
                 {experience.yearFrom} <span>&#8212;</span> {experience.yearTo}
               </p>
 

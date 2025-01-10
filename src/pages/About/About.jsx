@@ -15,23 +15,15 @@ const About = () => {
           About
         </h2>
       </div>
-      <div className="container mx-auto px-2 py-2 max-w-3xl bg-white p-6 rounded-3xl  shadow-lg border border-light-grey">
-        <h2 className="mb-4">
-          What happens when you combine security expertise with a love for
-          creative coding?
-        </h2>
+      <div className="container mx-auto pt-6 px-2 py-2 p-6 max-w-3xl bg-white rounded-3xl  shadow-lg border border-light-grey">
         <p className="mb-4">
-          After eight years in CCTV and access control security as a pre-sales
-          engineer, I realized I craved something more dynamic&nbsp;
-          <em className="font-bold">
-            —something that let me build, design, and constantly learn.
-          </em>
-          &nbsp; So, I made the leap into web development!
+          I’m a developer who loves creative design and the fusion of user
+          experience with robust engineering.
         </p>
         <p className="mb-4">
           Over the past 1.5 years, I've completed bootcamps and courses,
           mastering the&nbsp;
-          <em className="font-bold capitalize tracking-tight">
+          <em className="capitalize tracking-tight">
             HMTL&nbsp;&#124;&nbsp;CSS&nbsp;&#124;&nbsp;React&nbsp;&#124;&nbsp;JavaScript&nbsp;&#124;&nbsp;TypeScript
             &nbsp;&#124;&nbsp;Node&nbsp;&#124;&nbsp;Express&nbsp;&#124;&nbsp;MongoDB.&nbsp;
           </em>
@@ -67,21 +59,25 @@ const About = () => {
             – a perfect blend of technical complexity and user-focused design.
           </em>
         </p>
-        <p className="">
-          My background in security systems might seem unusual for a web
-          developer, but it's actually my secret weapon. Those years of
-          technical training and pre-sales engineering taught me how to:
+        <p className="mb-4">
+          My journey into web development began after spending eight years as a
+          Pre-Sales Engineer in the CCTV and access control security industry.
+          During that time, I developed a deep technical understanding and an
+          ability to solve complex problems. However, I craved a more dynamic
+          field that allowed me to build, design, and constantly learn. This led
+          me to make the leap into web development, where I can apply my
+          technical expertise in new, creative ways.
         </p>
-        <ul className="list-disc pl-4 ml-8 my-4">
-          <li>
-            Translate complex technical concepts into user-friendly solutions
-          </li>
-          <li>
-            Adapt quickly to new technologies -- try keeping up with security
-            tech!
-          </li>
-          <li>Collaborate effectively with diverse teams and stakeholders</li>
-        </ul>
+
+        <p className="mb-4">
+          Outside of coding, I’m passionate about painting, digital graphic
+          design, and illustrations. I also enjoy reading, taking on good
+          challenges such as playing games, and diving into new technologies. As
+          a Lord of the Rings fan, I love exploring fantastic worlds and
+          immersing myself in the creativity and imagination that they offer.
+        </p>
+
+        {/* 
         <p className="mb-4 font-bold">What People Say About Me:</p>
         <p className="mb-4 text-light-blue">From my previous managers:</p>
         <div className="space-y-4">
@@ -96,7 +92,7 @@ const About = () => {
             “If you want someone who gets things done and keeps the team spirit
             high, she’s the one.”
           </blockquote>
-        </div>
+        </div> */}
       </div>
     </section>
   );
