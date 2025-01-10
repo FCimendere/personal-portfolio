@@ -57,8 +57,8 @@ const Project = () => {
         </h2>
       </div>
 
-      <div className="container mx-auto px-4 py-10 max-w-3xl">
-        <div className="space-y-6 text-light-blue">
+      <div className="container mx-auto px-2 py-2 max-w-3xl bg-white p-6 rounded-3xl  shadow-lg border border-light-grey">
+        <div className="space-y-6 text-light-blue ">
           {projects.map((project) => (
             <a
               href={project.link}
@@ -81,18 +81,13 @@ const Project = () => {
 
               {/* Content on the right */}
               <div className="p-4 flex-1">
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative tracking-wider z-10 py-3 hover:text-dark-blue  hover:underline"
-                >
+                <div className="relative tracking-wider z-10 py-3 hover:text-dark-blue  hover:underline">
                   {project.name}
-                </a>
+                </div>
                 <p className="text-light-blue mt-2">{project.description}</p>
                 <div className="flex flex-row flex-wrap text-xs gap-2 mt-2">
-                  {project.tech.map((element) => (
-                    <Badge text={element} />
+                  {project.tech.map((element, index) => (
+                    <Badge key={index} text={element} />
                   ))}
                 </div>
               </div>

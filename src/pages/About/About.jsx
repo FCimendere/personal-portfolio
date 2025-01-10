@@ -15,7 +15,7 @@ const About = () => {
           About
         </h2>
       </div>
-      <div>
+      <div className="container mx-auto px-2 py-2 max-w-3xl bg-white p-6 rounded-3xl  shadow-lg border border-light-grey">
         <h2 className="mb-4">
           What happens when you combine security expertise with a love for
           creative coding?

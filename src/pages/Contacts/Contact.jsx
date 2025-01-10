@@ -1,22 +1,55 @@
-import React from 'react'
+import React from "react";
+import EmailButton from "../../components/EmailButton";
+import { Email } from "@mui/icons-material";
 
 const Contact = () => {
   return (
-    <div>
-      <h1>Contact</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis auctor ipsum, et ullamcorper quam. Integer nec ex malesuada, blandit urna et, feugiat felis. Sed nec sodales justo, et tincidunt velit. Phasellus et magna ligula. Morbi tincidunt auctor mauris, nec interdum orci mollis eu. Quisque metus enim, auctor at vehicula et, convallis ac urna. Donec elit nibh, sodales vel mattis sit amet, porttitor feugiat ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    <section
+      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 text-mid-blue"
+      id="contact"
+      aria-label="contact"
+    >
+      {/* Section Header */}
+      <div
+        className="sticky top-0 z-20 -mx-6 mb-4 bg-light-grey w-screen px-6 py-5 backdrop-blur
+      md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0 "
+      >
+        <h2 className="text-sm font-bold uppercase tracking-widest text-dark-blue lg:sr-only">
+          Contact
+        </h2>
+      </div>
 
-Quisque ante magna, fermentum sit amet sapien vel, tincidunt aliquet libero. Quisque sem nunc, rutrum ac blandit at, interdum non sem. Quisque at sodales augue, eu porttitor libero. Aliquam erat volutpat. Maecenas eget dictum nisl. Praesent sodales risus at nunc feugiat dapibus. Vestibulum rutrum vulputate facilisis. Praesent porta, urna ac varius lacinia, augue justo suscipit justo, sit amet volutpat magna urna quis neque. Sed fringilla porttitor tortor ac cursus. Integer sed justo urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt sodales nibh eu pulvinar. Nam convallis interdum turpis at fringilla. Nullam sollicitudin ante sit amet lectus aliquet, eget vulputate augue auctor. Ut interdum pulvinar enim ac ultricies.
+      {/* Card Container */}
+      <div className="container mx-auto px-2 py-2 max-w-3xl bg-white p-6 rounded-3xl  shadow-lg border border-light-grey">
+        <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-6 sm:space-y-0 sm:space-x-6 bg-white p-6 rounded-3xl  shadow-lg border border-light-grey">
+          {/* Thumbnail on the Left */}
+          <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden border-2 border-light-grey shadow-custom-out">
+            <img
+              src="/src/assets/profil.png"
+              alt="Profile"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          {/* Content on the Right */}
+          <div className="flex-1">
+            <h3 className="relative tracking-wider z-10 py-3  uppercase hover:text-dark-blue  hover:underline">
+              Let's Connect
+            </h3>
+            <p className="text-light-blue mt-2">
+              Hey There, I'm your friendly full-stack developer 🧙🏼‍♀️, currently
+              coding in the Netherlands. Whether it's creating elegant UI magic
+              or some math, I'm always up for something new.
+            </p>
 
-Vestibulum egestas risus vel risus sagittis ultrices. Etiam faucibus nulla tortor, vitae commodo orci feugiat at. Integer augue erat, mollis at quam sit amet, mattis consequat odio. Nulla facilisi. Donec non sapien lacus. Vivamus ac velit sit amet turpis pellentesque tristique eget a magna. Nunc ut ligula interdum, rhoncus lectus nec, pellentesque dolor. Fusce luctus, augue quis sodales lacinia, lectus velit tincidunt metus, id aliquam tellus ipsum vitae mauris. Ut semper efficitur tortor id consequat. Aliquam condimentum dolor facilisis, tristique felis id, venenatis ligula. Suspendisse eget felis a tellus aliquet placerat. Cras condimentum consectetur bibendum. Nam sed ex nec eros varius pharetra.
+            <p> Need a dev who can mix tech with a little artistic flair?</p>
+            <div className="mt-4">
+              <EmailButton />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-Nulla rutrum laoreet urna, at interdum quam accumsan sed. Suspendisse a porttitor enim. Aenean auctor lorem id vulputate aliquam. Quisque vulputate mi lorem, in malesuada ex laoreet nec. Aenean ullamcorper, magna in volutpat pretium, eros arcu volutpat eros, at egestas orci leo a diam. Aenean congue dolor ut commodo luctus. Donec non odio ac ligula dictum auctor.
-
-Vestibulum hendrerit erat vitae erat sodales feugiat. Mauris vitae risus finibus, mollis est sit amet, tincidunt erat. Vivamus ultrices in nibh eu volutpat. Ut viverra posuere orci aliquam tempor. Cras auctor gravida felis, vitae ullamcorper nisi sagittis vel. Nunc tempus tempor porttitor. Nunc in tincidunt nisi, in auctor enim.
-      </p>
-    </div>
-  )
-}
-
-export default Contact
+export default Contact;

@@ -1,51 +1,83 @@
 import React from "react";
+import Badge from "../../components/Badge";
+import PdfDownloader from "../../components/PdfDownloader";
+
+const experiences = [
+  {
+    id: 1,
+    yearFrom: 2024,
+    yearTo: "present",
+    title: "Full-stack Developer",
+    definition:
+      "Designed, implemented, and maintained API endpoints for emissions calculations using Node.js, TypeScript, and MongoDB. Developed front-end components with React to ensure seamless integration and user-friendly interfaces. Collaborated with cross-functional teams to align technical solutions with business requirements. Improved code quality through Git-based version control and code reviews.",
+    link: "https://greenhousecalculator.com/",
+    companyName: "Nordic Waves Group",
+    tech: ["React", "Redux", "TypeScript", "Node.JS", "Mongo"],
+  },
+  {
+    id: 2,
+    yearFrom: 2024,
+    yearTo: "present",
+    title: "Software Developer Intern",
+    definition:
+      "Collaborate on building and optimizing our AI chatbot for nutrition guidance using LLM. Work on backend and frontend development to improve user experience and platform functionality. Test and implement new features to enhance the AI’s capabilities. Solve complex technical challenges with innovative solutions. Help integrate analytics to track and improve user engagement ",
+    link: "https://nutrish.ai/",
+    companyName: "Nutrish.ai",
+    tech: ["React", "Next.Js", "Tailwind", "TypeScript", "PostgreSQL"],
+  },
+];
 
 const Experience = () => {
   return (
-    <div>
-      <h1>CV</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis
-        auctor ipsum, et ullamcorper quam. Integer nec ex malesuada, blandit
-        urna et, feugiat felis. Sed nec sodales justo, et tincidunt velit.
-        Phasellus et magna ligula. Morbi tincidunt auctor mauris, nec interdum
-        orci mollis eu. Quisque metus enim, auctor at vehicula et, convallis ac
-        urna. Donec elit nibh, sodales vel mattis sit amet, porttitor feugiat
-        ipsum. Class aptent taciti sociosqu ad litora torquent per conubia
-        nostra, per inceptos himenaeos. Quisque ante magna, fermentum sit amet
-        sapien vel, tincidunt aliquet libero. Quisque sem nunc, rutrum ac
-        blandit at, interdum non sem. Quisque at sodales augue, eu porttitor
-        libero. Aliquam erat volutpat. Maecenas eget dictum nisl. Praesent
-        sodales risus at nunc feugiat dapibus. Vestibulum rutrum vulputate
-        facilisis. Praesent porta, urna ac varius lacinia, augue justo suscipit
-        justo, sit amet volutpat magna urna quis neque. Sed fringilla porttitor
-        tortor ac cursus. Integer sed justo urna. Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit. Praesent tincidunt sodales nibh eu
-        pulvinar. Nam convallis interdum turpis at fringilla. Nullam
-        sollicitudin ante sit amet lectus aliquet, eget vulputate augue auctor.
-        Ut interdum pulvinar enim ac ultricies. Vestibulum egestas risus vel
-        risus sagittis ultrices. Etiam faucibus nulla tortor, vitae commodo orci
-        feugiat at. Integer augue erat, mollis at quam sit amet, mattis
-        consequat odio. Nulla facilisi. Donec non sapien lacus. Vivamus ac velit
-        sit amet turpis pellentesque tristique eget a magna. Nunc ut ligula
-        interdum, rhoncus lectus nec, pellentesque dolor. Fusce luctus, augue
-        quis sodales lacinia, lectus velit tincidunt metus, id aliquam tellus
-        ipsum vitae mauris. Ut semper efficitur tortor id consequat. Aliquam
-        condimentum dolor facilisis, tristique felis id, venenatis ligula.
-        Suspendisse eget felis a tellus aliquet placerat. Cras condimentum
-        consectetur bibendum. Nam sed ex nec eros varius pharetra. Nulla rutrum
-        laoreet urna, at interdum quam accumsan sed. Suspendisse a porttitor
-        enim. Aenean auctor lorem id vulputate aliquam. Quisque vulputate mi
-        lorem, in malesuada ex laoreet nec. Aenean ullamcorper, magna in
-        volutpat pretium, eros arcu volutpat eros, at egestas orci leo a diam.
-        Aenean congue dolor ut commodo luctus. Donec non odio ac ligula dictum
-        auctor. Vestibulum hendrerit erat vitae erat sodales feugiat. Mauris
-        vitae risus finibus, mollis est sit amet, tincidunt erat. Vivamus
-        ultrices in nibh eu volutpat. Ut viverra posuere orci aliquam tempor.
-        Cras auctor gravida felis, vitae ullamcorper nisi sagittis vel. Nunc
-        tempus tempor porttitor. Nunc in tincidunt nisi, in auctor enim.
-      </p>
-    </div>
+    <section
+      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 text-mid-blue"
+      id="project"
+      aria-label="project"
+    >
+      <div
+        className="sticky top-0 z-20 -mx-6 mb-4 bg-light-grey w-screen px-6 py-5 backdrop-blur
+      md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0 "
+      >
+        <h2 className="text-sm font-bold uppercase tracking-widest text-dark-blue lg:sr-only">
+          Experience
+        </h2>
+      </div>
+      <div className="container mx-auto px-2 py-2 max-w-3xl bg-white p-6 rounded-3xl  shadow-lg border border-light-grey">
+        <div className="space-y-6 text-light-blue">
+          {experiences.map((experience) => (
+            <a
+              href={experience.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={experience.id}
+              className="bg-light-grey overflow-hidden flex flex-col md:flex-row rounded-3xl border border-light-grey 
+              hover:none hover:shadow-custom-inset hover:text-dark-blue hover:border-light-grey cursor-pointer"
+            >
+              {/* Thumbnail on left*/}
+
+              <p className="text-light-blue mx-4 my-4 ">
+                {experience.yearFrom} <span>&#8212;</span> {experience.yearTo}
+              </p>
+
+              {/* Content on the right */}
+              <div className="p-4 flex-1">
+                <div className="relative font-medium leading-snug z-10 py-3 hover:text-dark-blue  hover:underline">
+                  {experience.title} <span>&#8226;&#160;</span>
+                  {experience.companyName}
+                </div>
+                <p className="text-light-blue mt-2">{experience.definition}</p>
+                <div className="flex flex-row flex-wrap text-xs gap-2 mt-2">
+                  {experience.tech.map((element, index) => (
+                    <Badge key={index} text={element} />
+                  ))}
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+        <PdfDownloader />
+      </div>
+    </section>
   );
 };
 

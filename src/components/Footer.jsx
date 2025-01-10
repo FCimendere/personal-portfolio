@@ -86,7 +86,7 @@ const Footer = () => {
       <div className="lg:py-24 mx-auto max-w-7xl px-2 sm:px-6 sm:py-2 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            {/* Mobile menu button*/}
+            Mobile menu button
             <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md text-dark-blue hover:bg-dark-blue hover:text-light-grey focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black">
               <span className="absolute -inset-0.5" />
               <span className="sr-only">Open main menu</span>
@@ -103,7 +103,7 @@ const Footer = () => {
 
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
-              <p className="h-8 w-auto text-black">
+              <p className="h-8 w-auto text-dark-blue">
                 Follow Me <span>&#8212;</span>
               </p>
             </div>
