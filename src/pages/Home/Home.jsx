@@ -3,12 +3,9 @@ import Footer from "../../components/Footer";
 import Circle from "../../components/Circle";
 import { Link } from "react-scroll";
 
-const Home = () => {
-  const [activeId, setActiveId] = useState("");
-
+const Home = ({ activeId, setActiveId }) => {
   const handleClick = (id) => {
     setActiveId(id);
-    // console.log(ref.current);
   };
 
   return (
