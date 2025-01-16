@@ -24,13 +24,13 @@ const Home = ({ activeId, setActiveId }) => {
       </div>
       <div className="flex">
         {/* Circle Shape */}
-        <div className="justify-center align-center circle-shape py-24">
+        <div className="hidden sm:flex justify-center align-center circle-shape py-24">
           <Circle id={activeId} />
         </div>
 
         {/* Button Group */}
 
-        <div className="button-group flex flex-col justify-center gap-8 ">
+        <div className="hidden sm:flex button-group flex-col justify-center gap-8 ">
           {["about", "project", "experience", "contact"].map((section) => (
             <Link
               key={section}

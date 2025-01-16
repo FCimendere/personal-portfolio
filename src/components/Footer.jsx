@@ -83,58 +83,40 @@ function classNames(...classes) {
 const Footer = () => {
   return (
     <Disclosure as="nav" className="bg-light-grey relative bottom">
-      <div className="lg:py-24 mx-auto max-w-7xl px-2 sm:px-6 sm:py-2 lg:px-8">
-        <div className="relative flex h-16 items-center justify-between">
-          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            Mobile menu button
-            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md text-dark-blue hover:bg-dark-blue hover:text-light-grey focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black">
-              <span className="absolute -inset-0.5" />
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon
-                aria-hidden="true"
-                className="block size-6 group-data-[open]:hidden"
-              />
-              <XMarkIcon
-                aria-hidden="true"
-                className="hidden size-6 group-data-[open]:block"
-              />
-            </DisclosureButton>
-          </div>
-
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex shrink-0 items-center">
-              <p className="h-8 w-auto text-dark-blue">
-                Follow Me <span>&#8212;</span>
-              </p>
-            </div>
-            <div className="hidden sm:ml-6 sm:block">
-              <div className="flex space-x-4">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    target={item.target}
-                    aria-label={item.ariaLabel}
-                    title={item.title}
-                    aria-current={item.current ? "page" : undefined}
-                    className={classNames(
-                      item.current
-                        ? "hover:bg-light-blue text-light-grey"
-                        : "text-light-grey hover:bg-light-blue hover:text-dark-blue",
-                      "rounded-md px-3 py-2 text-sm font-medium"
-                    )}
-                  >
-                    {item.svg}
-                  </a>
-                ))}
-              </div>
-            </div>
+      <div className="flex flex-1 items-center sm:justify-center sm:items-stretch sm:justify-start">
+        <div className="flex shrink-0 items-center">
+          <p className="hidden sm:block h-8 w-auto text-dark-blue">
+            Follow Me <span>&#8212;</span>
+          </p>
+        </div>
+        <div className="sm:ml-6 sm:block">
+          <div className="flex space-x-4">
+            {navigation.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                target={item.target}
+                aria-label={item.ariaLabel}
+                title={item.title}
+                aria-current={item.current ? "page" : undefined}
+                className={classNames(
+                  item.current
+                    ? "hover:border-light-blue hover:border-2 text-light-grey"
+                    : "text-light-grey hover:border-light-blue hover:border-2 hover:text-dark-blue",
+                  "rounded-md px-3 py-2 text-sm font-medium"
+                )}
+              >
+                {item.svg}
+              </a>
+            ))}
           </div>
         </div>
       </div>
+
+      {/* Mobile View */}
       <DisclosurePanel className="sm:hidden">
         <div className="space-y-1 px-2 pb-3 pt-2">
-          {navigation.map((item) => (
+          {navigation.map((item, index) => (
             <DisclosureButton
               key={item.name}
               as="a"
@@ -144,7 +126,8 @@ const Footer = () => {
                 item.current
                   ? "bg-mid-blue text-light-grey"
                   : "text-mid-blue hover:bg-light-blue hover:text-light-grey",
-                "block rounded-md px-3 py-2 text-base font-medium"
+                "block rounded-md px-3 py-2 text-base font-medium",
+                index === 0 ? "mt-10" : ""
               )}
             >
               {item.name}

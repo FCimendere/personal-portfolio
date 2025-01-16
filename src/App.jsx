@@ -1,7 +1,6 @@
 import "./App.css";
 import Home from "./pages/Home/Home";
 import RightSection from "./pages/RightSection/RightSection";
-import SplashCursor from "./components/SplashCursor";
 import { useState } from "react";
 
 function App() {
