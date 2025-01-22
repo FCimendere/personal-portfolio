@@ -1,6 +1,7 @@
 import React from "react";
 import EmailButton from "../../components/EmailButton";
-import { Email } from "@mui/icons-material";
+// import { Email } from "@mui/icons-material";
+import profil from "../../../public/profil.png";
 
 const Contact = () => {
   return (
@@ -25,7 +26,7 @@ const Contact = () => {
           {/* Thumbnail on the Left */}
           <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden border-2 border-light-grey shadow-custom-out">
             <img
-              src="/src/assets/profil.png"
+              src={profil}
               alt="Profile"
               className="w-full h-full object-cover"
             />
