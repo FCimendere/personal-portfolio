@@ -34,7 +34,7 @@ const About = () => {
           Currently, I'm putting my skills to work as a&nbsp;
           <em className="font-bold">Full-Stack Developer</em> at
           <a
-            className="font-bold text-light-blue hover:text-dark-blue focus-visible:text-teal-300"
+            className="font-bold text-light-blue hover:text-accent-color focus-visible:text-teal-300"
             href="https://www.nordicwaves.org/"
             target="_blank"
             rel="noreferrer noopener"
@@ -44,7 +44,7 @@ const About = () => {
           </a>
           , where I'm helping build a&nbsp;
           <a
-            className="font-bold text-light-blue hover:text-dark-blue focus-visible:text-teal-300"
+            className="font-bold text-light-blue hover:text-accent-color focus-visible:text-teal-300"
             href="https://greenhousecalculator.com/"
             target="_blank"
             rel="noreferrer noopener"
