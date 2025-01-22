@@ -20,7 +20,7 @@ const experiences = [
     yearTo: "present",
     title: "Software Developer Intern",
     definition:
-      "Collaborate on building and optimizing our AI chatbot for nutrition guidance using LLM. Work on backend and frontend development to improve user experience and platform functionality. Test and implement new features to enhance the AI’s capabilities. Solve complex technical challenges with innovative solutions. Help integrate analytics to track and improve user engagement ",
+      "Contributed to building scalable and intuitive platforms using Next.js, TypeScript, React, and Tailwind CSS. Implemented an AI translator feature using Vercel’s AI SDK, further showcasing my ability to leverage modern AI technologies to enhance functionality. Collaborating on AI-based products has equipped me with a strong understanding of integrating AI agents into practical, user-centric applications. ",
     link: "https://nutrish.ai/",
     companyName: "Nutrish.ai",
     tech: ["React", "Next.Js", "Tailwind", "TypeScript", "PostgreSQL"],
