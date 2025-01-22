@@ -1,6 +1,5 @@
 import React from "react";
 import EmailButton from "../../components/EmailButton";
-// import { Email } from "@mui/icons-material";
 import profil from "../../../public/profil.png";
 
 const Contact = () => {

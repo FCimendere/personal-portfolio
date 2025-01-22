@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import GradientTextButton from "./GradientTextButton";
 
 const PdfDownloader = () => {
   const PNG_FILE_URL = `${window.location.origin}/Fulya-Çimendere-Resume.pdf`;
@@ -24,15 +25,22 @@ const PdfDownloader = () => {
   };
 
   return (
-    <button
-      className="relative block mx-auto my-6 no-underline uppercase overflow-hidden w-40 text-center text-mid-blue rounded-3xl border border-light-grey shadow-custom-out 
-              hover:none hover:shadow-custom-inset hover:text-mid-blue hover:border-dark-blue cursor-pointer"
-      onClick={() => {
-        downloadPdf(PNG_FILE_URL);
-      }}
-    >
-      Download CV
-    </button>
+    <>
+      <GradientTextButton
+        colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+        animationSpeed={3}
+        showBorder={true}
+        className="custom-class mx-auto"
+      >
+        <button
+          onClick={() => {
+            downloadPdf(PNG_FILE_URL);
+          }}
+        >
+          DOWNLOAD CV
+        </button>
+      </GradientTextButton>
+    </>
   );
 };
 
