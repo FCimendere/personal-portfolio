@@ -16,7 +16,7 @@ const experiences = [
   },
   {
     id: 2,
-    yearFrom: 2024,
+    yearFrom: 2025,
     yearTo: "present",
     title: "Software Developer Intern",
     definition:
