@@ -50,6 +50,28 @@ const navigation = [
     current: false,
   },
   {
+    name: "Codepen",
+    title: "Codepen",
+    href: "https://codepen.io/fly_pixie",
+    target: "_blank",
+    ariaLabel: "Codepen (opens in a new tab)",
+    svg: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 64 64"
+        fill="none"
+        stroke="currentColor"
+        className="h-6 w-6"
+        aria-hidden="true"
+      >
+        <path
+          d="M3.06 41.732L32 60.932l28.94-19.2V22.268L32 3.068l-28.94 19.2zm57.878 0L32 22.268 3.06 41.732m0-19.463L32 41.47l28.94-19.2M32 3.068v19.2m0 19.463v19.2"
+          strokeWidth="5"
+        ></path>
+      </svg>
+    ),
+  },
+  {
     name: "X",
     title: "X",
     href: "https://x.com/fly_pixie",
@@ -59,8 +81,8 @@ const navigation = [
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 128 128"
-        width={24}
-        height={24}
+        width={22}
+        height={22}
         fill="currentColor"
       >
         <path
