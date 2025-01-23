@@ -43,6 +43,7 @@ const Home = ({ activeId, setActiveId }) => {
         <div className="hidden sm:flex button-group flex-col justify-center -gap-6 ">
           {["about", "project", "experience", "contact"].map((section) => (
             <GradientTextButton
+              key={section}
               colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
               animationSpeed={3}
               showBorder={true}
