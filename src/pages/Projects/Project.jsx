@@ -44,29 +44,29 @@ const Project = () => {
 
   return (
     <section
-      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 text-mid-blue"
+      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 text-maintext"
       id="project"
       aria-label="project"
     >
       <div
-        className="sticky top-0 z-20 -mx-6 mb-4 bg-light-grey w-screen px-6 py-5 backdrop-blur
+        className="sticky top-0 z-20 -mx-6 mb-4 bg-background w-screen px-6 py-5 backdrop-blur
       md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0 "
       >
-        <h2 className="text-sm font-bold uppercase tracking-widest text-dark-blue lg:sr-only">
+        <h2 className="text-sm font-bold uppercase tracking-widest dark:text-lighttext lg:sr-only">
           Projects
         </h2>
       </div>
 
-      <div className="container mx-auto px-2 py-2 max-w-3xl bg-white p-6 rounded-3xl  shadow-lg border border-light-grey">
-        <div className="space-y-6 text-light-blue ">
+      <div className="container mx-auto px-2 py-2 max-w-3xl bg-maincard p-6 rounded-3xl  shadow-lg border border-border transition-colors">
+        <div className="space-y-6 text-midtext ">
           {projects.map((project) => (
             <a
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
               key={project.id}
-              className="bg-light-grey overflow-hidden flex flex-col md:flex-row rounded-3xl border border-light-grey 
-              hover:none hover:shadow-custom-inset hover:text-dark-blue hover:border-light-grey cursor-pointer"
+              className="bg-innercard overflow-hidden flex flex-col md:flex-row rounded-3xl border border-border 
+              hover:none hover:shadow-custom-inset hover:text-maintext hover:border-border cursor-pointer"
             >
               {/* Thumbnail on left*/}
 
@@ -76,15 +76,22 @@ const Project = () => {
                   .resize(fill().width(500).height(500))
                   .toURL()}
                 alt="models"
-                className="hidden sm:block sm:w-1/6 md:w-1/6 lg:w-1/4 text-light-blue mx-4 my-4 object-cover rounded-3xl border border-light-grey shadow-custom-out"
+                className="hidden sm:block sm:w-1/6 md:w-1/6 lg:w-1/4 text-midtext mx-4 my-4 
+                  object-cover rounded-3xl border border-border dark:border-section 
+                  shadow-custom-out"
               />
 
               {/* Content on the right */}
               <div className="p-4 flex-1">
-                <div className="relative tracking-wider z-10 py-3 hover:text-dark-blue  hover:underline">
+                <div
+                  className="relative tracking-wider z-10 py-3 text-maintext dark:text-lighttext 
+                  hover:text-accent dark:hover:text-accent transition-colors hover:underline"
+                >
                   {project.name}
                 </div>
-                <p className="text-light-blue mt-2">{project.description}</p>
+                <p className="text-midtext dark:text-midtext mt-2 transition-colors">
+                  {project.description}
+                </p>
                 <div className="flex flex-row flex-wrap text-xs gap-2 mt-2">
                   {project.tech.map((element, index) => (
                     <Badge key={index} text={element} />

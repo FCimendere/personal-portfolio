@@ -23,7 +23,7 @@ export default function GradientTextButton({
           }}
         >
           <div
-            className="absolute inset-0 uppercase bg-light-grey rounded-3xl z-[-1]"
+            className="absolute inset-0 uppercase bg-background rounded-3xl z-[-1]"
             style={{
               width: "calc(100% - 2px)",
               height: "calc(100% - 2px)",
@@ -35,7 +35,7 @@ export default function GradientTextButton({
         </div>
       )}
       <div
-        className="inline-block relative z-2 text-light-blue hover:text-transparent bg-cover mx-6 animate-gradient"
+        className="inline-block relative z-2 text-midtext hover:text-transparent bg-cover mx-6 animate-gradient"
         style={{
           ...gradientStyle,
           backgroundClip: "text",

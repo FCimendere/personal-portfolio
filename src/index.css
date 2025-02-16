@@ -3,5 +3,41 @@
 @tailwind utilities;
 
 body {
-  background-color: #fbfcfa;
+  background-color: rgba(251, 252, 250);
+}
+
+.dark body {
+  background-color: rgba(19, 33, 59);
+}
+
+:root {
+  --background: rgba(251, 252, 250);
+  --badge: rgba(64, 121, 255);
+
+  --border: rgba(251, 252, 250);
+  --section: rgba(251, 252, 250);
+
+  --maincard: rgba(255, 255, 255);
+  --innercard: rgba(251, 252, 250);
+  --accent: rgba(92, 225, 230);
+
+  --maintext: rgba(64, 121, 255);
+  --midtext: rgba(119, 141, 169);
+  --lighttext: rgba(251, 252, 250);
+}
+
+.dark {
+  --background: rgba(19, 33, 59);
+  --badge: rgba(64, 121, 255);
+
+  --border: rgba(19, 33, 59);
+  --section: rgba(19, 33, 59);
+
+  --maincard: rgba(23, 36, 64);
+  --innercard: rgba(19, 33, 59);
+  --accent: rgba(92, 225, 230);
+
+  --maintext: rgba(64, 121, 255);
+  --midtext: rgba(119, 141, 169);
+  --lighttext: rgba(251, 252, 250);
 }
