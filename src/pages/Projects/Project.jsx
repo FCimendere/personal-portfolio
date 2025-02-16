@@ -65,8 +65,10 @@ const Project = () => {
               target="_blank"
               rel="noopener noreferrer"
               key={project.id}
-              className="bg-innercard overflow-hidden flex flex-col md:flex-row rounded-3xl border border-border 
-              hover:none hover:shadow-custom-inset hover:text-maintext hover:border-border cursor-pointer"
+              className="bg-innercard overflow-hidden flex flex-col md:flex-row rounded-3xl 
+              border border-border 
+              hover:shadow-out hover:text-maintext hover:border-border cursor-pointer
+              "
             >
               {/* Thumbnail on left*/}
 
@@ -77,8 +79,7 @@ const Project = () => {
                   .toURL()}
                 alt="models"
                 className="hidden sm:block sm:w-1/6 md:w-1/6 lg:w-1/4 text-midtext mx-4 my-4 
-                  object-cover rounded-3xl border border-border dark:border-section 
-                  shadow-custom-out"
+                  object-cover rounded-3xl border border-border dark:border-section"
               />
 
               {/* Content on the right */}

@@ -23,13 +23,13 @@ const Circle = ({ id }) => {
   }, [id]);
 
   return (
-    <div className="relative w-60 h-60 rounded-full border-4 border-background shadow-custom-out overflow-hidden">
+    <div className="">
       {/* Outer Circle */}
-      <div className="absolute inset-0 rounded-full bg-background z-[-1] transition-colors">
+      <div className="outCircle ">
         {/* Inner Circle with Custom Background */}
-        <div className="absolute inset-4 bg-background rounded-full shadow-custom-before">
+        <div className="innerCircle">
           <div
-            className="absolute w-[46%] h-1 bg-midtext rounded top-[50%] left-[5%] origin-right transition-transform duration-50 "
+            className="absolute w-[42%] h-1 bg-maintext rounded top-[50%] left-[8%] origin-right transition-transform duration-50 "
             style={{ transform: rotation }}
           ></div>
         </div>

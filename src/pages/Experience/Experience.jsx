@@ -51,7 +51,7 @@ const Experience = () => {
               rel="noopener noreferrer"
               key={experience.id}
               className="bg-innercard overflow-hidden flex flex-col md:flex-row rounded-3xl border border-border 
-              hover:none hover:shadow-custom-inset hover:text-maintext hover:border-border cursor-pointer"
+              hover:none hover:shadow-out hover:text-maintext hover:border-border cursor-pointer"
             >
               {/* Thumbnail on left*/}
 

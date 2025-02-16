@@ -12,7 +12,7 @@ export default function GradientTextButton({
 
   return (
     <div
-      className={`relative block flex my-6 w-[11rem] flex-row items-center justify-center rounded-3xl font-medium backdrop-blur transition-shadow duration-500 overflow-hidden shadow-custom-out cursor-pointer hover:none hover:shadow-custom-inset ${className}`}
+      className={`relative block flex my-6 w-[11rem] flex-row items-center justify-center rounded-3xl font-medium backdrop-blur transition-shadow duration-500 overflow-hidden cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-badge ${className}`}
     >
       {showBorder && (
         <div

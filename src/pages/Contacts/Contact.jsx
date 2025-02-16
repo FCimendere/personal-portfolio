@@ -23,7 +23,7 @@ const Contact = () => {
       <div className="container mx-auto px-2 py-2 max-w-3xl bg-maincard p-6 rounded-3xl  shadow-lg border border-border">
         <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-6 sm:space-y-0 sm:space-x-6 bg-maincard p-6 rounded-3xl  shadow-lg border border-border">
           {/* Thumbnail on the Left */}
-          <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden border-2 border-light-grey shadow-custom-out">
+          <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden border-2 border-light-grey">
             <img
               src={profil}
               alt="Profile"
