@@ -127,10 +127,13 @@ function classNames(...classes) {
 
 const Footer = () => {
   return (
-    <Disclosure as="nav" className="bg-light-grey relative bottom">
+    <Disclosure
+      as="nav"
+      className="bg-background relative bottom transition-colors"
+    >
       <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
         <div className="flex shrink-0 items-center">
-          {/* <p className="hidden sm:block h-8 w-auto text-dark-blue">
+          {/* <p className="hidden sm:block h-8 w-auto text-maintext">
             Reach Me <span>&#8212;</span>
           </p> */}
         </div>
@@ -146,8 +149,8 @@ const Footer = () => {
                 aria-current={item.current ? "page" : undefined}
                 className={classNames(
                   item.current
-                    ? "text-mid-blue hover:text-dark-blue"
-                    : "text-light-grey text-mid-blue hover:text-dark-blue",
+                    ? "text-midtext hover:text-maintext"
+                    : "text-lighttext text-midtext hover:text-maintext",
                   "rounded-md px-3 py-2 text-sm font-medium"
                 )}
               >
@@ -169,8 +172,8 @@ const Footer = () => {
               aria-current={item.current ? "page" : undefined}
               className={classNames(
                 item.current
-                  ? "bg-mid-blue text-light-grey"
-                  : "text-mid-blue hover:bg-light-blue hover:text-light-grey",
+                  ? "bg-background text-lighttext"
+                  : "text-maintext hover:bg-maintext hover:text-lighttext",
                 "block rounded-md px-3 py-2 text-base font-medium",
                 index === 0 ? "mt-10" : ""
               )}

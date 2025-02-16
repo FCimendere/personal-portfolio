@@ -1,10 +1,22 @@
 import "./App.css";
 import Home from "./pages/Home/Home";
 import RightSection from "./pages/RightSection/RightSection";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [activeId, setActiveId] = useState("");
+  useEffect(() => {
+    localStorage.setItem("theme", "light");
+    const selectedTheme = localStorage.getItem("theme");
+
+    if (selectedTheme) {
+      document.body.classList.add(selectedTheme);
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.add("light");
+    }
+  }, []);
 
   const handleSectionChange = (sectionId) => {
     setActiveId(sectionId);

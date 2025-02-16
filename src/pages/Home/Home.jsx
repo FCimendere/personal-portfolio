@@ -12,8 +12,8 @@ const Home = ({ activeId, setActiveId }) => {
 
   return (
     <>
-      <div className="text-dark-blue font-display">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl :text-center">
+      <div className="text-maintext font-display">
+        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
           <a href="/">Fulya Çimendere</a>
         </h1>
         <GradientText
@@ -27,7 +27,7 @@ const Home = ({ activeId, setActiveId }) => {
         {/* <h2 className="text-mid-blue mt-3 text-lg font-medium tracking-tight sm:text-lg">
           Full Stack Developer
         </h2> */}
-        <p className="text-light-blue mt-4 max-w-xs leading-normal">
+        <p className="text-midtext mt-4 max-w-xs leading-normal dark:text-midtext">
           Developer who loves creative design and the fusion of user experience
           with robust engineering.
         </p>
@@ -47,7 +47,7 @@ const Home = ({ activeId, setActiveId }) => {
               colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
               animationSpeed={3}
               showBorder={true}
-              className={`custom-class uppercase ${
+              className={`custom-class uppercase transition-colors  ${
                 ["project", "experience"].includes(section) ? "ml-10" : ""
               }`}
             >
@@ -59,7 +59,7 @@ const Home = ({ activeId, setActiveId }) => {
                 duration={500}
                 onClick={() => handleClick(`link-${section}`)}
               >
-                <span>
+                <span className="dark:text-lighttext">
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </span>
               </Link>

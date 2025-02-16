@@ -12,7 +12,7 @@ export default function GradientTextButton({
 
   return (
     <div
-      className={`relative block flex my-6 w-[11rem] flex-row items-center justify-center rounded-3xl font-medium backdrop-blur transition-shadow duration-500 overflow-hidden shadow-custom-out cursor-pointer hover:none hover:shadow-custom-inset ${className}`}
+      className={`relative block flex my-6 w-[11rem] flex-row items-center justify-center rounded-3xl font-medium backdrop-blur transition-shadow duration-500 overflow-hidden cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-badge ${className}`}
     >
       {showBorder && (
         <div
@@ -23,7 +23,7 @@ export default function GradientTextButton({
           }}
         >
           <div
-            className="absolute inset-0 uppercase bg-light-grey rounded-3xl z-[-1]"
+            className="absolute inset-0 uppercase bg-background rounded-3xl z-[-1]"
             style={{
               width: "calc(100% - 2px)",
               height: "calc(100% - 2px)",
@@ -35,7 +35,7 @@ export default function GradientTextButton({
         </div>
       )}
       <div
-        className="inline-block relative z-2 text-light-blue hover:text-transparent bg-cover mx-6 animate-gradient"
+        className="inline-block relative z-2 text-midtext hover:text-transparent bg-cover mx-6 animate-gradient"
         style={{
           ...gradientStyle,
           backgroundClip: "text",

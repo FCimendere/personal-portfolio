@@ -3,5 +3,99 @@
 @tailwind utilities;
 
 body {
-  background-color: #fbfcfa;
+  background-color: rgba(251, 252, 250);
+}
+
+.dark body {
+  background-color: rgba(19, 33, 59);
+}
+
+@layer components {
+  .outCircle {
+    @apply w-[15em] h-[15em] rounded-full border-4 border-[#fbfcfa] relative block overflow-hidden transition-colors duration-300;
+    box-shadow: var(--shadow-out);
+  }
+
+  .dark .outCircle {
+    @apply border-[--border];
+    box-shadow: var(--shadow-out);
+  }
+
+  .innerCircle {
+    @apply w-full h-full rounded-full transition-colors duration-300;
+    background-color: rgba(251, 252, 250, 1);
+    z-index: -1;
+  }
+
+  .dark .innerCircle {
+    background-color: var(--maincard);
+  }
+
+  .outCircle::before {
+    content: "";
+    @apply absolute top-[15px] bottom-[15px] left-[15px] right-[15px] rounded-full block transition-colors duration-300;
+    background: rgba(251, 252, 250, 1);
+    box-shadow: var(--shadow-before);
+  }
+
+  .dark .outCircle::before {
+    background: var(--maincard);
+    box-shadow: var(--shadow-before);
+  }
+}
+
+@layer utilities {
+  .shadow-out {
+    box-shadow: var(--shadow-out);
+  }
+}
+
+:root {
+  --background: rgba(251, 252, 250);
+  --badge: rgba(64, 121, 255);
+
+  --border: rgba(251, 252, 250);
+  --section: rgba(251, 252, 250);
+
+  --maincard: rgba(255, 255, 255);
+  --innercard: rgba(251, 252, 250);
+  --accent: rgba(92, 225, 230);
+
+  --maintext: rgba(64, 121, 255);
+  --midtext: rgba(119, 141, 169);
+  --lighttext: rgba(251, 252, 250);
+
+  --shadow-out: -10px -10px 15px rgba(251, 252, 250, 1),
+    10px 10px 10px rgba(0, 0, 0, 0.2),
+    inset -10px -10px 15px rgba(251, 252, 250, 0.5),
+    inset 10px 10px 10px rgba(0, 0, 0, 0.2);
+  --shadow-before: -10px -10px 35px rgba(251, 252, 250, 1),
+    5px 10px 10px rgba(0, 0, 0, 0.2),
+    inset -10px -10px 15px rgba(251, 252, 250, 0.5),
+    inset 10px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.dark {
+  --background: rgba(19, 33, 59);
+  --badge: rgba(64, 121, 255);
+
+  --border: rgba(19, 33, 59);
+  --section: rgba(19, 33, 59);
+
+  --maincard: rgba(23, 36, 64);
+  --innercard: rgba(19, 33, 59);
+  --accent: rgba(92, 225, 230);
+
+  --maintext: rgba(64, 121, 255);
+  --midtext: rgba(119, 141, 169);
+  --lighttext: rgba(251, 252, 250);
+
+  --shadow-out: -10px -10px 15px rgba(23, 36, 64, 1),
+    10px 10px 10px rgba(0, 0, 0, 0.2),
+    inset -10px -10px 15px rgba(23, 36, 64, 0.5),
+    inset 10px 10px 10px rgba(0, 0, 0, 0.2);
+  --shadow-before: -10px -10px 35px rgba(23, 36, 64, 1),
+    5px 10px 10px rgba(0, 0, 0, 0.2),
+    inset -10px -10px 15px rgba(23, 36, 64, 0.5),
+    inset 10px 10px 30px rgba(0, 0, 0, 0.2);
 }
