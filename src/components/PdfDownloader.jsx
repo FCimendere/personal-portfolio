@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import GradientTextButton from "./GradientTextButton";
+//before merging
 
 const PdfDownloader = () => {
   const PNG_FILE_URL = `${window.location.origin}/Fulya-Çimendere-Resume.pdf`;
