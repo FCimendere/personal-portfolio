@@ -4,6 +4,7 @@ import GradientTextButton from "./GradientTextButton";
 import { usePostHog } from "posthog-js/react";
 import posthog from "posthog-js";
 
+
 const PdfDownloader = () => {
   const PNG_FILE_URL = `${window.location.origin}/Fulya-Çimendere-Resume.pdf`;
   const downloadPdf = async (url) => {
