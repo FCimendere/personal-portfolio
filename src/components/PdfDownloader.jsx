@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 import GradientTextButton from "./GradientTextButton";
+import { usePostHog } from "posthog-js/react";
+import posthog from "posthog-js";
 
 const PdfDownloader = () => {
   const PNG_FILE_URL = `${window.location.origin}/Fulya-Çimendere-Resume.pdf`;
@@ -35,6 +37,9 @@ const PdfDownloader = () => {
         <button
           onClick={() => {
             downloadPdf(PNG_FILE_URL);
+            posthog.capture("download_button_clicked", {
+              user_name: "Fly the Hedgehog",
+            });
           }}
         >
           DOWNLOAD CV
