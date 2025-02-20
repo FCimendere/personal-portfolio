@@ -29,7 +29,7 @@ const Circle = ({ id }) => {
         {/* Inner Circle with Custom Background */}
         <div className="innerCircle">
           <div
-            className="absolute w-[42%] h-1 bg-maintext rounded top-[50%] left-[8%] origin-right transition-transform duration-50 "
+            className="absolute w-[42%] h-1 bg-maintext rounded top-[50%] left-[8%] origin-right transition-transform duration-500 ease-in-out "
             style={{ transform: rotation }}
           ></div>
         </div>
