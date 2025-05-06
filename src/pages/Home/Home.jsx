@@ -50,6 +50,7 @@ const Home = ({ activeId, setActiveId }) => {
               className={`custom-class uppercase transition-colors  ${
                 ["project", "experience"].includes(section) ? "ml-10" : ""
               }`}
+              aria-label={`Navigate to ${section}`}
             >
               <Link
                 key={section}
@@ -58,6 +59,10 @@ const Home = ({ activeId, setActiveId }) => {
                 smooth={true}
                 duration={500}
                 onClick={() => handleClick(`link-${section}`)}
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") handleClick(`link-${section}`);
+                }}
               >
                 <span className="dark:text-lighttext">
                   {section.charAt(0).toUpperCase() + section.slice(1)}

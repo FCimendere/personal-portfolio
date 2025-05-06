@@ -6,6 +6,7 @@ import Contact from "../Contacts/Contact";
 import { useIntersectionObserver } from "../../utils/useIntersectionObserver";
 import GoToTop from "../../components/GoToTop";
 import DarkButton from "../../components/DarkButton";
+import { throttle } from "lodash";
 
 const RightSection = ({ onSectionChange }) => {
   const sections = ["about", "project", "experience", "contact"];
@@ -25,13 +26,14 @@ const RightSection = ({ onSectionChange }) => {
   });
 
   useEffect(() => {
-    const handleScrollButtonVisibility = () => {
-      window.scrollY > 300 ? setShowButton(true) : setShowButton(false);
-    };
+    const handleScrollButtonVisibility = throttle(() => {
+      setShowButton(window.scrollY > 300);
+    }, 200); // Runs every 200ms instead of every frame
+
     window.addEventListener("scroll", handleScrollButtonVisibility);
 
     return () => {
-      window.addEventListener("scroll", handleScrollButtonVisibility);
+      window.removeEventListener("scroll", handleScrollButtonVisibility);
     };
   }, []);
 
