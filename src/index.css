@@ -87,7 +87,7 @@ body {
   --accent: rgba(92, 225, 230);
 
   --maintext: rgba(64, 121, 255);
-  --midtext: rgba(119, 141, 169);
+  --midtext: rgb(175, 186, 201);
   --lighttext: rgba(251, 252, 250);
 
   --shadow-out: -10px -10px 15px rgba(23, 36, 64, 1),
@@ -98,4 +98,29 @@ body {
     5px 10px 10px rgba(0, 0, 0, 0.2),
     inset -10px -10px 15px rgba(23, 36, 64, 0.5),
     inset 10px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+mark {
+  background: linear-gradient(
+    -100deg,
+    hsla(205, 87%, 50%, 0.3),
+    hsla(143, 48%, 74%, 0.585) 95%,
+    hsla(48, 77%, 49%, 0.1)
+  );
+  border-radius: 1.1em 0;
+  font-style: italic;
+  padding: 0.2rem;
+}
+
+.dark mark {
+  background: linear-gradient(
+    -100deg,
+    hsla(150, 100%, 63%, 0.3),
+    hsla(220, 100%, 63%, 0.5) 95%,
+    hsla(48, 77%, 48%, 0.1)
+  );
+  border-radius: 1em 0;
+  font-style: "italic";
+  color: rgb(229, 237, 238);
+  padding: 0.2rem;
 }

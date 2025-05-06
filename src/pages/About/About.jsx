@@ -21,30 +21,114 @@ const About = () => {
           experience with robust engineering.
         </p>
         <p className="mb-4">
-          Over the past 1.5 years, I've completed bootcamps and courses,
-          mastering the&nbsp;
+          Over the past 2 years, I've completed bootcamps and courses, mastering
+          the&nbsp;
           <em className="capitalize tracking-tight">
-            HMTL&nbsp;&#124;&nbsp;CSS&nbsp;&#124;&nbsp;React&nbsp;&#124;&nbsp;JavaScript&nbsp;&#124;&nbsp;TypeScript
-            &nbsp;&#124;&nbsp;Node&nbsp;&#124;&nbsp;Express&nbsp;&#124;&nbsp;MongoDB.&nbsp;
+            HMTL&nbsp;, CSS&nbsp;, React&nbsp;, NextJS&nbsp;, JavaScript&nbsp;,
+            TypeScript &nbsp;,Node&nbsp;, Express&nbsp;, MongoDB&nbsp;,
+            PostgreSQL&nbsp;
           </em>
-          While I enjoy full-stack development, my heart has always been with
-          front-end—crafting sleek, intuitive designs with React and CSS.
-        </p>
-        <p className="mb-4">
-          Currently, I'm putting my skills to work as a&nbsp;
-          <em className="font-bold">Full-Stack Developer</em> at
+          and{" "}
+          <mark>
+            dived into <em>AI Agents, LLM(Large Language Models)</em> world
+          </mark>{" "}
+          to follow latest technologies{" "}
+          <mark>as a volunteer at several summits, conferences</mark> such as{" "}
           <a
-            className="font-bold text-midtext hover:text-accent focus-visible:text-teal-300"
-            href="https://www.nordicwaves.org/"
+            className="text-midtext hover:text-maintext focus-visible:text-teal-300"
+            href="https://devworldconference.com/"
             target="_blank"
             rel="noreferrer noopener"
-            aria-label="small company(opens in new tab)"
+            aria-label="DevWorld main page"
           >
-            &nbsp;Nordic Waves Group
+            &nbsp;DevWorld Conference
           </a>
-          , where I'm helping build a&nbsp;
+          ,
           <a
-            className="font-bold text-midtext hover:text-accent focus-visible:text-teal-300"
+            className="text-midtext hover:text-maintext focus-visible:text-teal-300"
+            href="https://webdevcon.nl/"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="webdevcon.nl main page"
+          >
+            &nbsp;Webdevcon
+          </a>
+          <a
+            className="text-midtext hover:text-maintext focus-visible:text-teal-300"
+            href="https://reactsummit.com/"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="reactsummit main page"
+          >
+            &nbsp;React Summit
+          </a>
+          ,
+          <a
+            className="text-midtext hover:text-maintext focus-visible:text-teal-300"
+            href="https://jsnation.com/"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="jsnation main page"
+          >
+            &nbsp;JS Nation
+          </a>
+          , <mark>started to work at two different Startup company</mark> as
+          full stack developer.
+        </p>
+        <p>
+          As full-stack developer, I enjoy working on the backend because I love
+          seeing the full picture—the logic, the data, the flow. But I’m equally
+          drawn to the frontend, where design and colors bring everything to
+          life.
+        </p>
+        <br></br>
+        <p className="mb-4">
+          Currently, I'm putting my skills to work as a&nbsp;
+          <mark>
+            <em className="">Full-Stack Developer</em> at
+            <a
+              className="text-midtext hover:text-maintext focus-visible:text-teal-300"
+              href="https://nutrish.ai/"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="small company(opens in new tab)"
+            >
+              &nbsp;Nutrish.ai - Startup in AI-driven nutrisionist-
+            </a>{" "}
+          </mark>
+          , where I'm contrubuting build an&nbsp;
+          <a
+            className="font-bold text-midtext hover:text-maintext focus-visible:text-teal-300"
+            href="https://nutrish.ai/"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="nutrish.ai main page(opens in new tab)"
+          >
+            &nbsp;AI nutrition coaching tool over WhatsApp
+          </a>
+          &nbsp;that makes nutritionists accessible 24/7 with science-backed
+          guidance. My role involves both frontend and backend work, including
+          an LLM-backed translation feature for admins and creating charts and
+          user metrics for the admin dashboard.&nbsp;
+          <em className="font-bold">– a perfect blend of data and UX.</em>
+        </p>
+        <p className="mb-4">
+          Additionally, I'm supporting to world as a&nbsp;
+          <mark>
+            <em className="">Full-Stack Developer</em> at
+            <a
+              className="text-midtext hover:text-maintext focus-visible:text-teal-300"
+              href="https://www.nordicwaves.org/"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="small company(opens in new tab)"
+            >
+              &nbsp;Nordic Waves Group -a startup in sustainability-
+            </a>
+          </mark>
+          , where I'm contrubuting build a&nbsp;
+          <a
+            className="font-bold text-midtext hover:text-maintext focus-visible:text-teal-300"
             href="https://greenhousecalculator.com/"
             target="_blank"
             rel="noreferrer noopener"
@@ -59,14 +143,15 @@ const About = () => {
             – a perfect blend of technical complexity and user-focused design.
           </em>
         </p>
+
         <p className="mb-4">
-          My journey into web development began after spending eight years as a
-          Pre-Sales Engineer in the CCTV and access control security industry.
-          During that time, I developed a deep technical understanding and an
-          ability to solve complex problems. However, I craved a more dynamic
-          field that allowed me to build, design, and constantly learn. This led
-          me to make the leap into web development, where I can apply my
-          technical expertise in new, creative ways.
+          My journey into software development began after an 8-year career as
+          an engineer in the security industry, I noticed that I bring an
+          analytical and results-oriented perspective to the projects. I love
+          approaching problems analytically and knowing where the relevant data
+          is coming from. This helps me understand where the problem is coming
+          from when the code gets complicated, make product recommendations, and
+          see the whole picture from the database to the front-end.
         </p>
 
         <p className="mb-4">

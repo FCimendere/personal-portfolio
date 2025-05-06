@@ -5,17 +5,6 @@ import PdfDownloader from "../../components/PdfDownloader";
 const experiences = [
   {
     id: 1,
-    yearFrom: 2024,
-    yearTo: "present",
-    title: "Full-stack Developer",
-    definition:
-      "Designed, implemented, and maintained API endpoints for emissions calculations using Node.js, TypeScript, and MongoDB. Developed front-end components with React to ensure seamless integration and user-friendly interfaces. Collaborated with cross-functional teams to align technical solutions with business requirements. Improved code quality through Git-based version control and code reviews.",
-    link: "https://greenhousecalculator.com/",
-    companyName: "Nordic Waves Group",
-    tech: ["React", "Redux", "TypeScript", "Node.JS", "Mongo"],
-  },
-  {
-    id: 2,
     yearFrom: 2025,
     yearTo: "present",
     title: "Software Developer Intern",
@@ -23,7 +12,27 @@ const experiences = [
       "Contributed to building scalable and intuitive platforms using Next.js, TypeScript, React, and Tailwind CSS. Implemented an AI translator feature using Vercel’s AI SDK, further showcasing my ability to leverage modern AI technologies to enhance functionality. Collaborating on AI-based products has equipped me with a strong understanding of integrating AI agents into practical, user-centric applications. ",
     link: "https://nutrish.ai/",
     companyName: "Nutrish.ai",
-    tech: ["React", "Next.Js", "Tailwind", "TypeScript", "PostgreSQL"],
+    tech: [
+      "React",
+      "Next.Js",
+      "Tailwind",
+      "TypeScript",
+      "Node.JS",
+      "PostgreSQL",
+      "Drizzle ORM",
+      "Zod",
+    ],
+  },
+  {
+    id: 2,
+    yearFrom: 2024,
+    yearTo: "present",
+    title: "Full-stack Developer",
+    definition:
+      "Designed, implemented, and maintained API endpoints for emissions calculations using Node.js, TypeScript, and MongoDB. Developed front-end components with React to ensure seamless integration and user-friendly interfaces. Collaborated with cross-functional teams to align technical solutions with business requirements. Improved code quality through Git-based version control and code reviews.",
+    link: "https://greenhousecalculator.com/",
+    companyName: "Nordic Waves Group",
+    tech: ["React", "Redux", "TypeScript", "Node.JS", "MongoDB"],
   },
 ];
 
