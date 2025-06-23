@@ -24,7 +24,7 @@ const About = () => {
           Over the past 2 years, I've completed bootcamps and courses, mastering
           the&nbsp;
           <em className="capitalize tracking-tight">
-            HMTL&nbsp;, CSS&nbsp;, React&nbsp;, NextJS&nbsp;, JavaScript&nbsp;,
+            HTML&nbsp;, CSS&nbsp;, React&nbsp;, NextJS&nbsp;, JavaScript&nbsp;,
             TypeScript &nbsp;,Node&nbsp;, Express&nbsp;, MongoDB&nbsp;,
             PostgreSQL&nbsp;
           </em>
