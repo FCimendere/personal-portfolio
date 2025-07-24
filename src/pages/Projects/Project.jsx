@@ -4,6 +4,9 @@ import { fill } from "@cloudinary/url-gen/actions/resize";
 // import { Link } from "react-router-dom";
 // import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 import Badge from "../../components/Badge";
+import GradientTextButton from "../../components/GradientTextButton";
+import { useNavigate } from "react-router-dom";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const projects = [
   {
@@ -33,6 +36,7 @@ const projects = [
 ];
 
 const Project = () => {
+  const navigate = useNavigate();
   //Cloudinary implementation
   const cloud = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
 
@@ -58,8 +62,8 @@ const Project = () => {
       </div>
 
       <div className="container mx-auto px-2 py-2 max-w-3xl bg-maincard p-6 rounded-3xl  shadow-lg border border-border transition-colors">
-        <div className="space-y-6 text-midtext ">
-          {projects.map((project) => (
+        {
+          projects.slice(0, 3).map((project) => (
             <a
               href={project.link}
               target="_blank"
@@ -100,8 +104,69 @@ const Project = () => {
                 </div>
               </div>
             </a>
-          ))}
-        </div>
+          ))
+        }
+        {/* Go to Projects Button  */}
+        <GradientTextButton
+          colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+          animationSpeed={3}
+          showBorder={true}
+          className="custom-class mx-auto"
+          aria-label="Go to Projects"
+        >
+          <button
+            type="button"
+            onClick={() => navigate("/projects")}
+            className="w-full h-full  px-8 py-0 uppercase whitespace-nowrap flex items-center justify-center group"
+          >
+            ALL PROJECTS
+            <FiArrowUpRight className="ml-2 text-xl transition-colors duration-200 group-hover:text-accent" />
+          </button>
+        </GradientTextButton>
+        {
+          projects.slice(3).map((project) => (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={project.id}
+              className="bg-innercard overflow-hidden flex flex-col md:flex-row rounded-3xl 
+              border border-border 
+              hover:shadow-out hover:text-maintext hover:border-border cursor-pointer
+              "
+            >
+              {/* Thumbnail on left*/}
+
+              <img
+                src={cld
+                  .image(`docs/models-${project.id}`)
+                  .resize(fill().width(500).height(500))
+                  .toURL()}
+                alt="models"
+                className="hidden sm:block sm:w-1/6 md:w-1/6 lg:w-1/4 text-midtext mx-4 my-4 
+                  object-cover rounded-3xl border border-border dark:border-section"
+              />
+
+              {/* Content on the right */}
+              <div className="p-4 flex-1">
+                <div
+                  className="relative tracking-wider z-10 py-3 text-maintext dark:text-lighttext 
+                  hover:text-accent dark:hover:text-accent transition-colors hover:underline"
+                >
+                  {project.name}
+                </div>
+                <p className="text-midtext dark:text-midtext mt-2 transition-colors">
+                  {project.description}
+                </p>
+                <div className="flex flex-row flex-wrap text-xs gap-2 mt-2">
+                  {project.tech.map((element, index) => (
+                    <Badge key={index} text={element} />
+                  ))}
+                </div>
+              </div>
+            </a>
+          ))
+        }
       </div>
     </section>
   );

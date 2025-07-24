@@ -41,7 +41,12 @@ const Home = ({ activeId, setActiveId }) => {
         {/* Button Group */}
 
         <div className="hidden sm:flex button-group flex-col justify-center -gap-6 ">
-          {["about", "project", "experience", "contact"].map((section) => (
+          {[
+            "about",
+            "project",
+            "experience",
+            "contact"
+          ].map((section) => (
             <GradientTextButton
               key={section}
               colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
@@ -70,6 +75,22 @@ const Home = ({ activeId, setActiveId }) => {
               </Link>
             </GradientTextButton>
           ))}
+          {/* Go to Projects Button
+          <GradientTextButton
+            colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+            animationSpeed={3}
+            showBorder={true}
+            className="custom-class uppercase transition-colors mt-8"
+            aria-label="Go to Projects"
+          >
+            <button
+              type="button"
+              onClick={() => navigate("/projects")}
+              className="w-full h-full"
+            >
+              Go to Projects
+            </button>
+          </GradientTextButton> */}
         </div>
       </div>
 
