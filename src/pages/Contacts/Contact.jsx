@@ -7,7 +7,8 @@ const Contact = () => {
     <section
       className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 text-mid-blue"
       id="contact"
-      aria-label="contact"
+      aria-label="Contact section"
+      role="region"
     >
       {/* Section Header */}
       <div
@@ -26,7 +27,8 @@ const Contact = () => {
           <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden border-2 border-light-grey">
             <img
               src={profil}
-              alt="Profile"
+              alt="Profile picture of Fulya Çimendere"
+              aria-label="Profile picture of Fulya Çimendere"
               className="w-full h-full object-cover"
             />
           </div>
@@ -46,7 +48,7 @@ const Contact = () => {
               Need a dev who can mix tech with a little artistic flair?
             </p>
             <div className="mt-4">
-              <EmailButton />
+              <EmailButton aria-label="Send email to Fulya Çimendere" />
             </div>
           </div>
         </div>

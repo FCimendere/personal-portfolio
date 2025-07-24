@@ -64,25 +64,26 @@ const RightSection = ({ onSectionChange }) => {
 
   return (
     <>
-      <DarkButton switchMode={darkModeHandler} isDark={!isDark} />
+      <DarkButton switchMode={darkModeHandler} isDark={!isDark} aria-label="Toggle dark mode" />
 
       <div className="space-y-16">
-        <section id="about">
+        <section id="about" aria-label="About section" role="region">
           <About />
         </section>
-        <section id="project">
+        <section id="project" aria-label="Project section" role="region">
           <Project />
         </section>
-        <section id="experience">
+        <section id="experience" aria-label="Experience section" role="region">
           <Experience />
         </section>
-        <section id="contact">
+        <section id="contact" aria-label="Contact section" role="region">
           <Contact />
         </section>
         {showButton && (
           <GoToTop
-            showGoTop="fixed bottom-5 right-7 z-50 cursor-pointer p-4"
+            showGoTop="fixed bottom-5 right-7 z-50 cursor-pointer p-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
             scrollUp={handleScrollToTop}
+            aria-label="Scroll to top"
           />
         )}
       </div>

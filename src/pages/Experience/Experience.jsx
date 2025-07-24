@@ -41,7 +41,8 @@ const Experience = () => {
     <section
       className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 text-midtext"
       id="project"
-      aria-label="project"
+      aria-label="Experience section"
+      role="region"
     >
       <div
         className="sticky top-0 z-20 -mx-6 mb-4 bg-background w-screen px-6 py-5 backdrop-blur
@@ -51,7 +52,7 @@ const Experience = () => {
           Experience
         </h2>
       </div>
-      <div className="container mx-auto px-2 py-2 max-w-3xl bg-maincard p-6 rounded-3xl  shadow-lg border border-border">
+      <div className="container mx-auto px-2 py-2 max-w-3xl bg-maincard p-6 rounded-3xl  shadow-lg border border-border" role="list">
         <div className="space-y-6 text-midtext">
           {experiences.map((experience) => (
             <a
@@ -60,7 +61,9 @@ const Experience = () => {
               rel="noopener noreferrer"
               key={experience.id}
               className="bg-innercard overflow-hidden flex flex-col md:flex-row rounded-3xl border border-border 
-              hover:none hover:shadow-out hover:text-maintext hover:border-border cursor-pointer"
+              hover:none hover:shadow-out hover:text-maintext hover:border-border cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              role="listitem"
+              aria-label={`View details for experience: ${experience.title} at ${experience.companyName}`}
             >
               {/* Thumbnail on left*/}
 

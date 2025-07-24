@@ -61,7 +61,10 @@ const Project = () => {
         </h2>
       </div>
 
-      <div className="container mx-auto px-2 py-2 max-w-3xl bg-maincard p-6 rounded-3xl  shadow-lg border border-border transition-colors">
+      <div
+        className="container mx-auto px-2 py-2 max-w-3xl bg-maincard p-6 rounded-3xl  shadow-lg border border-border transition-colors"
+        role="list"
+      >
         {
           projects.slice(0, 3).map((project) => (
             <a
@@ -71,8 +74,9 @@ const Project = () => {
               key={project.id}
               className="bg-innercard overflow-hidden flex flex-col md:flex-row rounded-3xl 
               border border-border 
-              hover:shadow-out hover:text-maintext hover:border-border cursor-pointer
-              "
+              hover:shadow-out hover:text-maintext hover:border-border cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              role="listitem"
+              aria-label={`View details for project: ${project.name}`}
             >
               {/* Thumbnail on left*/}
 
@@ -81,7 +85,7 @@ const Project = () => {
                   .image(`docs/models-${project.id}`)
                   .resize(fill().width(500).height(500))
                   .toURL()}
-                alt="models"
+                alt={`Screenshot or logo for project: ${project.name}`}
                 className="hidden sm:block sm:w-1/6 md:w-1/6 lg:w-1/4 text-midtext mx-4 my-4 
                   object-cover rounded-3xl border border-border dark:border-section"
               />
@@ -112,12 +116,14 @@ const Project = () => {
           animationSpeed={3}
           showBorder={true}
           className="custom-class mx-auto"
-          aria-label="Go to Projects"
+          aria-label="View all projects"
+          role="button"
         >
           <button
             type="button"
             onClick={() => navigate("/projects")}
-            className="w-full h-full  px-8 py-0 uppercase whitespace-nowrap flex items-center justify-center group"
+            className="w-full h-full px-8 py-0 uppercase whitespace-nowrap flex items-center justify-center group focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            aria-label="Go to all projects page"
           >
             ALL PROJECTS
             <FiArrowUpRight className="ml-2 text-xl transition-colors duration-200 group-hover:text-accent" />
@@ -132,8 +138,9 @@ const Project = () => {
               key={project.id}
               className="bg-innercard overflow-hidden flex flex-col md:flex-row rounded-3xl 
               border border-border 
-              hover:shadow-out hover:text-maintext hover:border-border cursor-pointer
-              "
+              hover:shadow-out hover:text-maintext hover:border-border cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              role="listitem"
+              aria-label={`View details for project: ${project.name}`}
             >
               {/* Thumbnail on left*/}
 
@@ -142,7 +149,7 @@ const Project = () => {
                   .image(`docs/models-${project.id}`)
                   .resize(fill().width(500).height(500))
                   .toURL()}
-                alt="models"
+                alt={`Screenshot or logo for project: ${project.name}`}
                 className="hidden sm:block sm:w-1/6 md:w-1/6 lg:w-1/4 text-midtext mx-4 my-4 
                   object-cover rounded-3xl border border-border dark:border-section"
               />
