@@ -11,20 +11,20 @@ import { FiArrowUpRight } from "react-icons/fi";
 const projects = [
   {
     id: 1,
-    name: "E-Commerce Webshop",
+    name: "{ AI } Translate",
     description:
-      "Modern full-stack ecommerce app which uses React, Next.js, Stripe & Sanity - from start to finish.",
-    link: "https://ecommerce-psi-six-78.vercel.app/",
-    tech: ["React", "Next.Js", "Sanity CMS", "Stripe", "Vercel"],
+      "AI-driven web application for seamless translation. The platform supports instant translation across various languages, automatic language detection, and quicklanguage swapping.",
+    link: "https://translation-ai-app.vercel.app/",
+    tech: ["React", "Next.Js", "TypeScript", "Tailwind", "Vercel AI SDK", "Lucide-React"],
   },
-  {
-    id: 2,
-    name: "ShareMe",
-    description:
-      "A social media app for sharing images which uses React, Tailwind CSS & Sanity as CMS - from start to finish.",
-    link: "https://sharemebyfly.netlify.app/",
-    tech: ["React", "Tailwind", "Sanity CMS", "Netlify"],
-  },
+  // {
+  //   id: 4,
+  //   name: "ShareMe",
+  //   description:
+  //     "A social media app for sharing images which uses React, Tailwind CSS & Sanity as CMS - from start to finish.",
+  //   link: "https://sharemebyfly.netlify.app/",
+  //   tech: ["React", "Tailwind", "Sanity CMS", "Netlify"],
+  // },
   {
     id: 3,
     name: "YelpCamp",
@@ -32,6 +32,14 @@ const projects = [
       "A full-stack web application for sharing and reviewing campgrounds.",
     link: "https://yelp-camp-rgop.onrender.com/",
     tech: ["Bootstrap", "Node", "Express", "EJS", "Mongo", "JOI", "Cloudinary"],
+  },
+  {
+    id: 2,
+    name: "E-Commerce Webshop",
+    description:
+      "Modern full-stack ecommerce app which uses React, Next.js, Stripe & Sanity - from start to finish.",
+    link: "https://ecommerce-psi-six-78.vercel.app/",
+    tech: ["React", "Next.Js", "Sanity CMS", "Stripe", "Vercel"],
   },
 ];
 
@@ -62,11 +70,14 @@ const Project = () => {
       </div>
 
       <div
-        className="container mx-auto px-2 py-2 max-w-3xl bg-maincard p-6 rounded-3xl  shadow-lg border border-border transition-colors"
+        className="container mx-auto px-2 py-2 max-w-3xl bg-maincard p-6 rounded-3xl shadow-lg border border-border transition-colors mb-10"
         role="list"
       >
         {
-          projects.slice(0, 3).map((project) => (
+          projects
+            .sort((a, b) => a.id - b.id)
+            .slice(0, 3)
+            .map((project) => (
             <a
               href={project.link}
               target="_blank"
@@ -130,7 +141,10 @@ const Project = () => {
           </button>
         </GradientTextButton>
         {
-          projects.slice(3).map((project) => (
+          projects
+            .sort((a, b) => a.id - b.id)
+            .slice(3)
+            .map((project) => (
             <a
               href={project.link}
               target="_blank"
