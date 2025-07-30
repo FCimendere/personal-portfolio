@@ -30,7 +30,7 @@ const projects = [
     name: "YelpCamp",
     description:
       "A full-stack web application for sharing and reviewing campgrounds.",
-    link: "https://yelp-camp-rgop.onrender.com/",
+    link: "https://yelp-camp-gamma-five.vercel.app/",
     tech: ["Bootstrap", "Node", "Express", "EJS", "Mongo", "JOI", "Cloudinary"],
   },
   {
