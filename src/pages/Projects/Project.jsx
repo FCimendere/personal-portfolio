@@ -85,7 +85,7 @@ const Project = () => {
               key={project.id}
               className="bg-innercard overflow-hidden flex flex-col md:flex-row rounded-3xl 
               border border-border 
-              hover:shadow-out hover:text-maintext hover:border-border cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              hover:shadow-out hover:text-maintext hover:border-border cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent mb-6"
               role="listitem"
               aria-label={`View details for project: ${project.name}`}
             >
@@ -152,7 +152,7 @@ const Project = () => {
               key={project.id}
               className="bg-innercard overflow-hidden flex flex-col md:flex-row rounded-3xl 
               border border-border 
-              hover:shadow-out hover:text-maintext hover:border-border cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              hover:shadow-out hover:text-maintext hover:border-border cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent mb-6"
               role="listitem"
               aria-label={`View details for project: ${project.name}`}
             >
