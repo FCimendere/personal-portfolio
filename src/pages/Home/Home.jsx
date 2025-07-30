@@ -12,8 +12,8 @@ const Home = ({ activeId, setActiveId }) => {
 
   return (
     <>
-      <div className="text-maintext font-display">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+      <div className="text-maintext font-display" aria-label="Home section">
+        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl" aria-label="Fulya Çimendere, Full Stack Developer">
           <a href="/">Fulya Çimendere</a>
         </h1>
         <GradientText
@@ -34,14 +34,19 @@ const Home = ({ activeId, setActiveId }) => {
       </div>
       <div className="flex">
         {/* Circle Shape */}
-        <div className="hidden sm:flex justify-center align-center circle-shape py-24">
+        <div className="hidden sm:flex justify-center align-center circle-shape py-24" aria-hidden="true">
           <Circle id={activeId} />
         </div>
 
         {/* Button Group */}
 
         <div className="hidden sm:flex button-group flex-col justify-center -gap-6 ">
-          {["about", "project", "experience", "contact"].map((section) => (
+          {[
+            "about",
+            "project",
+            "experience",
+            "contact"
+          ].map((section) => (
             <GradientTextButton
               key={section}
               colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
@@ -50,7 +55,7 @@ const Home = ({ activeId, setActiveId }) => {
               className={`custom-class uppercase transition-colors  ${
                 ["project", "experience"].includes(section) ? "ml-10" : ""
               }`}
-              aria-label={`Navigate to ${section}`}
+              aria-label={`Navigate to ${section} section`}
             >
               <Link
                 key={section}
@@ -63,6 +68,7 @@ const Home = ({ activeId, setActiveId }) => {
                 onKeyDown={(e) => {
                   if (e.key === "Enter") handleClick(`link-${section}`);
                 }}
+                className="focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 <span className="dark:text-lighttext">
                   {section.charAt(0).toUpperCase() + section.slice(1)}

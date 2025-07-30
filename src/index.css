@@ -4,6 +4,7 @@
 
 body {
   background-color: rgba(251, 252, 250);
+  
 }
 
 .dark body {
@@ -73,6 +74,8 @@ body {
     5px 10px 10px rgba(0, 0, 0, 0.2),
     inset -10px -10px 15px rgba(251, 252, 250, 0.5),
     inset 10px 10px 30px rgba(0, 0, 0, 0.2);
+  --animated-gradient: linear-gradient(135deg, hsla(205, 87%, 50%, 0.3), hsla(143, 48%, 74%, 0.585) 95%);
+
 }
 
 .dark {
@@ -98,29 +101,64 @@ body {
     5px 10px 10px rgba(0, 0, 0, 0.2),
     inset -10px -10px 15px rgba(23, 36, 64, 0.5),
     inset 10px 10px 30px rgba(0, 0, 0, 0.2);
+
+  --animated-gradient: linear-gradient(135deg, hsla(150, 100%, 63%, 0.3), hsla(220, 100%, 63%, 0.5) 95%);
 }
 
 mark {
-  background: linear-gradient(
-    -100deg,
-    hsla(205, 87%, 50%, 0.3),
-    hsla(143, 48%, 74%, 0.585) 95%,
-    hsla(48, 77%, 49%, 0.1)
-  );
+  background: linear-gradient(-100deg,
+      hsla(205, 87%, 50%, 0.3),
+      hsla(143, 48%, 74%, 0.585) 95%,
+      hsla(48, 77%, 49%, 0.1));
   border-radius: 1.1em 0;
   font-style: italic;
   padding: 0.2rem;
 }
 
 .dark mark {
-  background: linear-gradient(
-    -100deg,
-    hsla(150, 100%, 63%, 0.3),
-    hsla(220, 100%, 63%, 0.5) 95%,
-    hsla(48, 77%, 48%, 0.1)
-  );
+  background: linear-gradient(-100deg,
+      hsla(150, 100%, 63%, 0.3),
+      hsla(220, 100%, 63%, 0.5) 95%,
+      hsla(48, 77%, 48%, 0.1));
   border-radius: 1em 0;
   font-style: "italic";
   color: rgb(229, 237, 238);
   padding: 0.2rem;
 }
+/* Scrollbar Track */
+::-webkit-scrollbar {
+  width: 8px;  /* width of vertical scrollbar */
+  height: 8px; /* height of horizontal scrollbar */
+}
+
+/* Scrollbar Track Background */
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* color of the track */
+}
+
+/* Scrollbar Thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(-100deg,
+  hsla(205, 87%, 50%),
+  hsla(143, 48%, 74%),
+  rgb(70, 86, 157));
+  border-radius: 4px;
+  border: 2px solid #f0f0f0;
+}
+
+/* Hover effect on thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.my-scroll-container {
+  scrollbar-color: #888 #f0f0f0;
+  scrollbar-width: thin;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%) #f0f0f0;
+}
+
+

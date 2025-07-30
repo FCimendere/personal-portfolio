@@ -6,6 +6,7 @@ const About = () => {
       className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 text-midtext"
       id="about"
       aria-label="About me"
+      role="region"
     >
       <div
         className="sticky top-0 z-20 -mx-6 mb-4 bg-background w-screen px-6 py-5 backdrop-blur
@@ -39,7 +40,7 @@ const About = () => {
             href="https://devworldconference.com/"
             target="_blank"
             rel="noreferrer noopener"
-            aria-label="DevWorld main page"
+            aria-label="DevWorld Conference (opens in new tab)"
           >
             &nbsp;DevWorld Conference
           </a>
@@ -49,7 +50,7 @@ const About = () => {
             href="https://webdevcon.nl/"
             target="_blank"
             rel="noreferrer noopener"
-            aria-label="webdevcon.nl main page"
+            aria-label="Webdevcon (opens in new tab)"
           >
             &nbsp;Webdevcon
           </a>
@@ -58,7 +59,7 @@ const About = () => {
             href="https://reactsummit.com/"
             target="_blank"
             rel="noreferrer noopener"
-            aria-label="reactsummit main page"
+            aria-label="React Summit (opens in new tab)"
           >
             &nbsp;React Summit
           </a>
@@ -68,7 +69,7 @@ const About = () => {
             href="https://jsnation.com/"
             target="_blank"
             rel="noreferrer noopener"
-            aria-label="jsnation main page"
+            aria-label="JS Nation (opens in new tab)"
           >
             &nbsp;JS Nation
           </a>

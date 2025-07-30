@@ -3,7 +3,7 @@ import axios from "axios";
 import GradientTextButton from "./GradientTextButton";
 import { usePostHog } from "posthog-js/react";
 import posthog from "posthog-js";
-
+import { FiDownload } from "react-icons/fi";
 
 const PdfDownloader = () => {
   const PNG_FILE_URL = `${window.location.origin}/Fulya-Çimendere-Resume.pdf`;
@@ -42,8 +42,10 @@ const PdfDownloader = () => {
               user_name: "Fly the Hedgehog",
             });
           }}
+          className="w-full h-full px-8 py-0 uppercase whitespace-nowrap flex items-center justify-center group"
         >
           DOWNLOAD CV
+          <FiDownload className="ml-2 text-xl transition-colors duration-200 group-hover:text-accent" />
         </button>
       </GradientTextButton>
     </>

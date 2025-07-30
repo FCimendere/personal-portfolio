@@ -3,7 +3,7 @@ import { IoSunny, IoMoon } from "react-icons/io5";
 
 const DarkButton = ({ switchMode, isDark }) => {
   return (
-    <div className="w-12 h-12 fixed right-6 top-6" onClick={switchMode}>
+    <div className="w-12 h-12 fixed right-6 top-6 z-50" onClick={switchMode}>
       {/* Outer Circle */}
       <div className="innerCircle">
         {/* Inner Circle with Custom Background */}

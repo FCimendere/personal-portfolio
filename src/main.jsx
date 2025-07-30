@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App.jsx";
 import posthog from "posthog-js";
 import { PostHogProvider } from "posthog-js/react";
+import { BrowserRouter } from "react-router-dom";
 
 posthog.init("phc_qiOUlNz5UTVZwm5a4BZbYbt22J0V6HyydMNiHmqrmk2", {
   api_host: "https://eu.i.posthog.com",
@@ -13,7 +14,9 @@ posthog.init("phc_qiOUlNz5UTVZwm5a4BZbYbt22J0V6HyydMNiHmqrmk2", {
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <PostHogProvider client={posthog}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </PostHogProvider>
   </StrictMode>
 );
